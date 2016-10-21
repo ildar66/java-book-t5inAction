@@ -1,8 +1,16 @@
+<!-- <t:layout xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
+	${hello}
+</t:layout> -->
+
+<!-- <html t:type="layout" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
+	${hello} from layout
+</html> -->
+
 <html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
-<head>
-	<title>Tapestry 5 Book</title>
-</head>
-<body>
-	<t:helloworldcomponent />
-</body>
+	<head>
+		<title>Tapestry 5 Book</title>
+	</head>
+	<t:content>
+		<body t:type="layout">${hello} Supporting WYSIWYG preview</body>
+	</t:content>
 </html>
