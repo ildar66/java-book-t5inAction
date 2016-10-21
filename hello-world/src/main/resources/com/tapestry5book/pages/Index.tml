@@ -1,5 +1,8 @@
-<html t:type="layout" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
-    ${hello}
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
+<head>
+	<title>Tapestry 5 Book</title>
+</head>
+<body>
+	<t:helloworldcomponent />
+</body>
 </html>
-
-
