@@ -11,6 +11,6 @@
 		<title>Tapestry 5 Book</title>
 	</head>
 	<t:content>
-		<body t:type="layout">${hello} Supporting WYSIWYG preview</body>
+		<body t:type="layout">${hello} Supportinghh  WYSIWYG preview</body>
 	</t:content>
 </html>
