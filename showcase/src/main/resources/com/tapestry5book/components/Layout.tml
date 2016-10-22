@@ -1,0 +1,13 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
+	<head>
+		<title>Tapestry 5 Book</title>
+        <link rel="shortcut icon" type="image/x-icon" href="${context:favicon.ico}" />
+	</head>
+	<body>
+		<t:body />
+
+<!-- 		<div t:type="if" test="showSource" id="sourcecode">
+			<div t:type="viewsource" />
+		</div> -->
+	</body>
+</html>

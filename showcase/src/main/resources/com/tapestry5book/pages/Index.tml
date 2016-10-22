@@ -1,9 +1,10 @@
-<!-- <html t:type="indexlayout" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
 
+<!-- <html t:type="indexlayout" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"> -->
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
     <p>
         <a t:type="pagelink" page="chapter02/index">Chapter 2: Tapestry templates</a>
     </p>
-    <p>
+  <!--   <p>
         <a t:type="pagelink" page="chapter03/index">Chapter 3: Page navigation</a>
     </p>
     <p>
@@ -17,13 +18,6 @@
     </p>
     <p>
         <a t:type="pagelink" page="chapter08/index">Chapter 8: Generating UI for JavaBeans</a>
-    </p>
-</html> -->
-<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"> 
-	<head>
-		<title>Tapestry 5 Book</title>
-	</head>
-	<!-- <t:content> -->
-		<body >temp out Index</body>
-	<!-- </t:content> -->
+    </p> -->
 </html>
+
