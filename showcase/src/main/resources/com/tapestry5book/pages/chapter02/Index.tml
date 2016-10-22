@@ -1,5 +1,4 @@
-<!-- <html t:type="indexlayout" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"> -->
-<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
+<html t:type="indexlayout" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
     <div>
         This chapter covers:
         <ul>
@@ -21,15 +20,15 @@
 
     Demo pages:
     <p>
-        <a t:type="pagelink" page="chapter02/htmlentitydemo">Using html entities in templates</a>
+        <a t:type="pagelink" t:page="chapter02/htmlentitydemo">Using html entities in templates</a>
     </p>
      <p>
-        <a t:type="pagelink" page="chapter02/whatiscurrenttime">Accessing page properties from templates</a>
-    </p>
-<!--    <p>
-        <a t:type="pagelink" page="chapter02/propdemo">Accessing page methods from templates</a>
+        <a t:type="pagelink" t:page="chapter02/whatiscurrenttime">Accessing page properties from templates</a>
     </p>
     <p>
+        <a t:type="pagelink" t:page="chapter02/propdemo">Accessing page methods from templates</a>
+    </p>
+<!--    <p>
         <a t:type="pagelink" page="chapter02/vardemo">Creating render variables with <i>var</i> prefix</a>
     </p>
     <p>
