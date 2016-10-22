@@ -1,13 +1,13 @@
 package com.tapestry5book.entities;
 
 
-import javax.persistence.Column;
+/*import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.Id;*/
 
-@Entity
-public class Tag {
+//@Entity
+public class Tag {/*
     @Id
     @GeneratedValue
     private Long id;
@@ -31,4 +31,4 @@ public class Tag {
     public void setName(final String name) {
         this.name = name;
     }
-}
+*/}

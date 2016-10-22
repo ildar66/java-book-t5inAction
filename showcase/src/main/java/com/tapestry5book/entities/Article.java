@@ -3,13 +3,13 @@ package com.tapestry5book.entities;
 import org.apache.tapestry5.beaneditor.NonVisual;
 import org.apache.tapestry5.beaneditor.Validate;
 
-import javax.persistence.*;
+//import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-@Entity
-public class Article {
+//@Entity
+public class Article {/*
     @Id
     @GeneratedValue
     @NonVisual
@@ -96,4 +96,4 @@ public class Article {
     }
 
 
-}
+*/}

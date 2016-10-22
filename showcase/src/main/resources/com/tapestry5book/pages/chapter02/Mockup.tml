@@ -1,0 +1,12 @@
+<html t:type="layout" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
+
+    <ul>
+        <t:remove>
+            <li>list item goes here</li>
+            <li>list item goes here</li>
+        </t:remove>
+
+        <li t:type="loop"
+            t:source="[1,2]" value="var:index">list item ${var:index}</li>
+    </ul>
+</html>

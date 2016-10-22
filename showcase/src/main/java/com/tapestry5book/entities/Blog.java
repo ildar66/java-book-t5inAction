@@ -1,11 +1,11 @@
 package com.tapestry5book.entities;
 
-import javax.persistence.*;
+//import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
-public class Blog {
+//@Entity
+public class Blog {/*
 
     @Id
     @GeneratedValue
@@ -58,4 +58,4 @@ public class Blog {
         this.articles = articles;
     }
 
-}
+*/}
