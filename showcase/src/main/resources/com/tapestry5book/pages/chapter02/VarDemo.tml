@@ -1,0 +1,11 @@
+<html t:type="layout" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
+    <ul>
+        <t:loop source="numbers" value="var:myVar">
+            <li>${var:myVar}</li>
+        </t:loop>
+        
+        <t:loop source="[1,2,3,4,5] " value="var:myVar">${var:myVar} </t:loop>
+        
+        <t:loop source="1..5 " value="var:myVar"><li>${var:myVar}</li></t:loop>
+    </ul>
+</html>

@@ -28,10 +28,10 @@
     <p>
         <a t:type="pagelink" t:page="chapter02/propdemo">Accessing page methods from templates</a>
     </p>
-<!--    <p>
+    <p>
         <a t:type="pagelink" page="chapter02/vardemo">Creating render variables with <i>var</i> prefix</a>
     </p>
-    <p>
+<!--    <p>
         <a t:type="pagelink" page="chapter02/mockup">Mark a template portion for removal in production</a>
     </p>
     <p>
