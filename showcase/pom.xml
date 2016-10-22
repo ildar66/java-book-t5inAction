@@ -8,4 +8,17 @@
   <artifactId>showcase</artifactId>
   <packaging>war</packaging>
   <name>Tapestry 5 Book Demo application</name>
+  
+  <dependencies>
+        <dependency>
+            <groupId>org.apache.tapestry</groupId>
+            <artifactId>tapestry-core</artifactId>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.apache.tapestry</groupId>
+            <artifactId>tapestry-hibernate</artifactId>
+        </dependency>
+        
+  </dependencies>
 </project>
