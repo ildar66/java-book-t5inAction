@@ -1,0 +1,58 @@
+body {
+    margin: 10px 200px 10px 10px;
+    padding: 10;
+    background-image: url("images/cover_small.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+#sourcecode {
+    padding-top: 70px;
+}
+
+div.form-row {
+    padding: 4px 0 2px;
+}
+
+div.form-row label {
+    float: left;
+    width: 150px;
+}
+
+div.t-beaneditor {
+    background: none;
+    border: none;
+}
+
+dl.t-beandisplay {
+    background: none;
+    border: none;
+}
+
+.kaptcha-image {
+    margin-left: 150px;
+    padding: 3px 0 3px 0;
+}
+
+.navigation {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 60px;
+}
+
+.newer-entries {
+    float: right;
+}
+
+.older-entries {
+    float: left;
+}
+
+.even {
+    background-color: #eee;
+}
+
+.odd {
+    background-color: #EAF4FF;
+}
