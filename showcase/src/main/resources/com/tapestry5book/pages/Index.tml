@@ -1,8 +1,7 @@
 
-<!-- <html t:type="indexlayout" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"> -->
-<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
+<html t:type="indexlayout" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
     <p>
-        <a t:type="pagelink" page="chapter02/index">Chapter 2: Tapestry templates</a>
+        <a t:type="pagelink" t:page="chapter02/index">Chapter 2: Tapestry templates</a>
     </p>
   <!--   <p>
         <a t:type="pagelink" page="chapter03/index">Chapter 3: Page navigation</a>
