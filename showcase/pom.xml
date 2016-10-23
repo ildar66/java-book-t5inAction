@@ -15,10 +15,15 @@
             <artifactId>tapestry-core</artifactId>
         </dependency>
         
-       <!--  <dependency>
+        <dependency>
             <groupId>org.apache.tapestry</groupId>
             <artifactId>tapestry-hibernate</artifactId>
-        </dependency> -->
+        </dependency>
+
+		<dependency>
+			<groupId>hsqldb</groupId>
+			<artifactId>hsqldb</artifactId>
+		</dependency>
         
         <dependency>
             <groupId>javax.servlet</groupId>

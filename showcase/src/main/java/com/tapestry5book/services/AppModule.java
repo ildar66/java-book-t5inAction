@@ -4,9 +4,12 @@ import java.io.IOException;
 
 import org.apache.tapestry5.SymbolConstants;
 import org.apache.tapestry5.ValueEncoder;
+import org.apache.tapestry5.hibernate.HibernateTransactionAdvisor;
 import org.apache.tapestry5.ioc.MappedConfiguration;
+import org.apache.tapestry5.ioc.MethodAdviceReceiver;
 import org.apache.tapestry5.ioc.OrderedConfiguration;
 import org.apache.tapestry5.ioc.ServiceBinder;
+import org.apache.tapestry5.ioc.annotations.Advise;
 import org.apache.tapestry5.ioc.annotations.Contribute;
 import org.apache.tapestry5.ioc.annotations.Local;
 import org.apache.tapestry5.services.Request;
@@ -19,10 +22,12 @@ import org.slf4j.Logger;
 
 import com.tapestry5book.entities.Article;
 import com.tapestry5book.services.impl.ArticleEncoder;
+import com.tapestry5book.services.impl.BlogServiceImpl;
 
 public class AppModule {
 	public static void bind(ServiceBinder binder) {
 		// binder.bind(MyServiceInterface.class, MyServiceImpl.class);
+		binder.bind(BlogService.class, BlogServiceImpl.class);
 
 	}
 
@@ -128,6 +133,12 @@ public class AppModule {
 		};
 
 		configuration.add(clazz, factory);
+	}
+
+	@Advise(serviceInterface = BlogService.class)
+	public static void adviseTransactionally(
+			HibernateTransactionAdvisor advisor, MethodAdviceReceiver receiver) {
+		advisor.addTransactionCommitAdvice(receiver);
 	}
 
 }
