@@ -40,17 +40,17 @@
     <p>
         <a t:type="pagelink" t:page="chapter02/oneventannotationdemo">Using @OnEvent annotation to mark event handler methods</a>
     </p>
+    <p>
+        <a t:type="pagelink" t:page="chapter02/eventcontextdemo">Triggering event with context</a>
+    </p>
  <!--   <p>
-        <a t:type="pagelink" page="chapter02/eventcontextdemo">Triggering event with context</a>
+        <a t:type="pagelink" t:page="chapter02/returntypedemo">Returning different types in event handler methods</a>
     </p>
     <p>
-        <a t:type="pagelink" page="chapter02/returntypedemo">Returning different types in event handler methods</a>
+        <a t:type="pagelink" t:page="chapter02/eventlinkdemo">Triggering events with EventLink component</a>
     </p>
     <p>
-        <a t:type="pagelink" page="chapter02/eventlinkdemo">Triggering events with EventLink component</a>
-    </p>
-    <p>
-        <a t:type="pagelink" page="chapter02/programmaticlinkdemo">Creating event request links programmatically</a>
+        <a t:type="pagelink" t:page="chapter02/programmaticlinkdemo">Creating event request links programmatically</a>
     </p>
  -->
 </html>
