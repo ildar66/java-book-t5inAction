@@ -43,10 +43,10 @@
     <p>
         <a t:type="pagelink" t:page="chapter02/eventcontextdemo">Triggering event with context</a>
     </p>
- <!--   <p>
+    <p>
         <a t:type="pagelink" t:page="chapter02/returntypedemo">Returning different types in event handler methods</a>
     </p>
-    <p>
+ <!--   <p>
         <a t:type="pagelink" t:page="chapter02/eventlinkdemo">Triggering events with EventLink component</a>
     </p>
     <p>
