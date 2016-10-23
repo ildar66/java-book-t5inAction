@@ -5,14 +5,34 @@ import org.apache.tapestry5.annotations.Property;
 
 public class Read {
 
-    @Property
-    private Article article;
+	@Property
+	private Article article;
 
-    void onActivate(Article article) {
-        this.article = article;
-    }
+	void onActivate(Article article) {
+		this.article = article;
+	}
 
-    Article onPassivate() {
-        return article;
-    }
+	Article onPassivate() {
+		return article;
+	}
+
+/*
+ * Overloaded activation methods
+ * 
+ * 	@Property
+	private boolean showComments;
+
+	void onActivate(Article article) {
+		onActivate(article, true);
+	}
+
+	boolean onActivate(Article article, boolean showComments) {
+		this.article = article;
+		this.showComments = showComments;
+		return true;// nod need call another onActivate(Article article)
+	}
+
+	Object[] onPassivate() {
+		return new Object[] { article, showComments };
+	}*/
 }
