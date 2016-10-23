@@ -1,0 +1,11 @@
+<html t:type="layout"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
+
+<ul t:type="loop" t:source="articles" t:value="currentArticle">
+	<a t:type="pagelink" t:page="chapter03/blog/v1/read"
+		t:context="currentArticle.id">${currentArticle.title}</a>
+</ul>
+
+</html>
+
+

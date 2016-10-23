@@ -9,23 +9,23 @@ import java.util.Date;
 import java.util.List;
 
 //@Entity
-public class Article {/*
-    @Id
-    @GeneratedValue
+public class Article {
+    //@Id
+    //@GeneratedValue
     @NonVisual
     private Long id;
-
-    @Column
+ 
+    //@Column
     @Validate("required")
     private String title;
 
-    @Temporal(TemporalType.TIMESTAMP)
+    //@Temporal(TemporalType.TIMESTAMP)
     private Date publishDate;
 
-    @Column
+   // @Column
     @Validate("required")
     private String content;
-
+    /*
     @ManyToOne(optional = false)
     private Blog blog;
 
@@ -38,7 +38,7 @@ public class Article {/*
     public Article() {
         super();
     }
-
+*/
     public Long getId() {
         return this.id;
     }
@@ -62,7 +62,7 @@ public class Article {/*
     public void setPublishDate(final Date publishDate) {
         this.publishDate = publishDate;
     }
-
+    /*
     public String getContent() {
         return this.content;
     }
