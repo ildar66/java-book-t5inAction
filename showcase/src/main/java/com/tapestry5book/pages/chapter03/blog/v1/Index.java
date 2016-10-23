@@ -9,7 +9,7 @@ import java.util.List;
 
 public class Index {
 
-    //@Inject
+    @Inject
     private BlogService blogService;
 
     @Property

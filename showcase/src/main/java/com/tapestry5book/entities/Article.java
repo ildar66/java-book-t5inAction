@@ -62,7 +62,7 @@ public class Article {
     public void setPublishDate(final Date publishDate) {
         this.publishDate = publishDate;
     }
-    /*
+ 
     public String getContent() {
         return this.content;
     }
@@ -70,7 +70,7 @@ public class Article {
     public void setContent(final String content) {
         this.content = content;
     }
-
+    /*
     public Blog getBlog() {
         return this.blog;
     }

@@ -1,6 +1,7 @@
 <html t:type="layout" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
 
-    <h2>${article.title}</h2>
+	     <h2><a t:type="pagelink" t:page="read">${article.title}</a></h2>
+		 <!-- <h2><a t:type="pagelink" page="read" context="[currentArticle,true]">${currentArticle.title}</a></h2> -->
 <!--     <h2><a t:type="pagelink" t:page="chapter03/blog/v2/read">${article.title}</a></h2> -->
 
     <div t:type="output" t:value="article.publishDate" t:format="literal:d MMM, yyyy"/>
