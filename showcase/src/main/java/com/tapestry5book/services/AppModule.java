@@ -3,15 +3,22 @@ package com.tapestry5book.services;
 import java.io.IOException;
 
 import org.apache.tapestry5.SymbolConstants;
+import org.apache.tapestry5.ValueEncoder;
 import org.apache.tapestry5.ioc.MappedConfiguration;
 import org.apache.tapestry5.ioc.OrderedConfiguration;
 import org.apache.tapestry5.ioc.ServiceBinder;
+import org.apache.tapestry5.ioc.annotations.Contribute;
 import org.apache.tapestry5.ioc.annotations.Local;
 import org.apache.tapestry5.services.Request;
 import org.apache.tapestry5.services.RequestFilter;
 import org.apache.tapestry5.services.RequestHandler;
 import org.apache.tapestry5.services.Response;
+import org.apache.tapestry5.services.ValueEncoderFactory;
+import org.apache.tapestry5.services.ValueEncoderSource;
 import org.slf4j.Logger;
+
+import com.tapestry5book.entities.Article;
+import com.tapestry5book.services.impl.ArticleEncoder;
 
 public class AppModule {
 	public static void bind(ServiceBinder binder) {
@@ -93,4 +100,34 @@ public class AppModule {
 
 		configuration.add("Timing", filter);
 	}
+
+	@Contribute(ValueEncoderSource.class)
+	public static void provideEncoders(
+			MappedConfiguration<Class, ValueEncoderFactory> configuration,
+			final BlogService blogService) {
+		/*
+		 * ValueEncoderFactory<Article> factory = new
+		 * ValueEncoderFactory<Article>() { public ValueEncoder<Article>
+		 * create(Class<Article> clazz) { return new
+		 * ArticleEncoder(blogService); } }; configuration.add(Article.class,
+		 * factory);
+		 */
+		contributeEncoder(configuration, Article.class, new ArticleEncoder(
+				blogService));
+	}
+
+	private static <T> void contributeEncoder(
+			MappedConfiguration<Class, ValueEncoderFactory> configuration,
+			Class<T> clazz, final ValueEncoder<T> encoder) {
+
+		ValueEncoderFactory<T> factory = new ValueEncoderFactory<T>() {
+
+			public ValueEncoder<T> create(Class<T> clazz) {
+				return encoder;
+			}
+		};
+
+		configuration.add(clazz, factory);
+	}
+
 }

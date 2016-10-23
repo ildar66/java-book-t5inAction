@@ -19,7 +19,7 @@ public class Read {
 	Long onPassivate() {
 		return article.getId();
 	}
-
+// 3.2.3 Multiple-value activation context
 //	@Property
 //	private boolean showComments;
 //
