@@ -117,8 +117,7 @@ public class AppModule {
 		 * ArticleEncoder(blogService); } }; configuration.add(Article.class,
 		 * factory);
 		 */
-		contributeEncoder(configuration, Article.class, new ArticleEncoder(
-				blogService));
+//		contributeEncoder(configuration, Article.class, new ArticleEncoder(blogService));
 	}
 
 	private static <T> void contributeEncoder(

@@ -3,26 +3,26 @@ package com.tapestry5book.entities;
 import org.apache.tapestry5.beaneditor.NonVisual;
 import org.apache.tapestry5.beaneditor.Validate;
 
-//import javax.persistence.*;
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-//@Entity
+@Entity
 public class Article {
-    //@Id
-    //@GeneratedValue
+    @Id
+    @GeneratedValue
     @NonVisual
     private Long id;
  
-    //@Column
+    @Column
     @Validate("required")
     private String title;
 
-    //@Temporal(TemporalType.TIMESTAMP)
+    @Temporal(TemporalType.TIMESTAMP)
     private Date publishDate;
 
-   // @Column
+    @Column
     @Validate("required")
     private String content;
     /*
