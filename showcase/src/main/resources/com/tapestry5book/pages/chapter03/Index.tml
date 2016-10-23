@@ -39,11 +39,11 @@ Demo pages:
     <a t:type="pagelink" t:page="chapter03/blog/v5/index">@ActivationRequestParameter demo</a>
 </p>
 
-<!--<p>
+<p>
     <a t:type="pagelink" t:page="chapter03/blog/v6/index">@RequestParameter demo</a>
 </p>
 
-<p>
+<!--<p>
     <a t:type="pagelink" t:page="chapter03/returntypesdemo">Returns types for event handler methods</a>
 </p>
  -->
