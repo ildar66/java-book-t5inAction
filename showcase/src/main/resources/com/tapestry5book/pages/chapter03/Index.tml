@@ -31,20 +31,20 @@ Demo pages:
     <a t:type="pagelink" t:page="chapter03/blog/v3/index">Redirect by returning a page instance</a>
 </p>
 
-<!-- <p>
-    <a t:type="pagelink" page="chapter03/blog/v4/index">Redirect by returning a Link instance</a>
+<p>
+    <a t:type="pagelink" t:page="chapter03/blog/v4/index">Redirect by returning a Link instance</a>
+</p>
+
+<!--<p>
+    <a t:type="pagelink" t:page="chapter03/blog/v5/index">@ActivationRequestParameter demo</a>
 </p>
 
 <p>
-    <a t:type="pagelink" page="chapter03/blog/v5/index">@ActivationRequestParameter demo</a>
+    <a t:type="pagelink" t:page="chapter03/blog/v6/index">@RequestParameter demo</a>
 </p>
 
 <p>
-    <a t:type="pagelink" page="chapter03/blog/v6/index">@RequestParameter demo</a>
-</p>
-
-<p>
-    <a t:type="pagelink" page="chapter03/returntypesdemo">Returns types for event handler methods</a>
+    <a t:type="pagelink" t:page="chapter03/returntypesdemo">Returns types for event handler methods</a>
 </p>
  -->
 </html>
