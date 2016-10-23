@@ -1,0 +1,10 @@
+<html t:type="layout" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
+    <p>Current value: ${number}</p>
+
+    <a t:type="eventlink" t:event="increment">Increment</a>
+    <br />    
+    <a t:type="eventlink" t:id="increment">IncrementById</a>
+    
+    <!-- <a t:type="eventlink">IncrementByEventLink</a> -->
+
+</html>
