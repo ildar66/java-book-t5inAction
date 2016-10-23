@@ -49,8 +49,8 @@
     <p>
         <a t:type="pagelink" t:page="chapter02/eventlinkdemo">Triggering events with EventLink component</a>
     </p>
- <!--   <p>
+    <p>
         <a t:type="pagelink" t:page="chapter02/programmaticlinkdemo">Creating event request links programmatically</a>
     </p>
- -->
+
 </html>
