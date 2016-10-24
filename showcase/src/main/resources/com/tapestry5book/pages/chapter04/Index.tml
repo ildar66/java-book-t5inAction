@@ -18,12 +18,12 @@
 </div>
 
 
-Demo pages:
-<!-- <p>
+Demo pages for chapter 4:
+<p>
     <a t:type="pagelink" page="chapter04/randomnumberdemo">Persisting page's properties</a>
 </p>
 
-<p>
+<!-- <p>
     <a t:type="pagelink" page="chapter04/flashdemo">Using flash persistence strategy for persistent properties</a>
 </p>
 
