@@ -2,6 +2,7 @@ package com.tapestry5book.services;
 
 import java.io.IOException;
 
+import org.apache.tapestry5.PersistenceConstants;
 import org.apache.tapestry5.SymbolConstants;
 import org.apache.tapestry5.ValueEncoder;
 import org.apache.tapestry5.hibernate.HibernateTransactionAdvisor;
@@ -12,6 +13,9 @@ import org.apache.tapestry5.ioc.ServiceBinder;
 import org.apache.tapestry5.ioc.annotations.Advise;
 import org.apache.tapestry5.ioc.annotations.Contribute;
 import org.apache.tapestry5.ioc.annotations.Local;
+import org.apache.tapestry5.services.ApplicationStateContribution;
+import org.apache.tapestry5.services.ApplicationStateCreator;
+import org.apache.tapestry5.services.ApplicationStateManager;
 import org.apache.tapestry5.services.Request;
 import org.apache.tapestry5.services.RequestFilter;
 import org.apache.tapestry5.services.RequestHandler;
@@ -20,15 +24,19 @@ import org.apache.tapestry5.services.ValueEncoderFactory;
 import org.apache.tapestry5.services.ValueEncoderSource;
 import org.slf4j.Logger;
 
-import com.tapestry5book.entities.Article;
-import com.tapestry5book.services.impl.ArticleEncoder;
+import com.tapestry5book.entities.Blog;
+import com.tapestry5book.entities.ShoppingCart;
+import com.tapestry5book.entities.Track;
 import com.tapestry5book.services.impl.BlogServiceImpl;
+import com.tapestry5book.services.impl.MusicLibraryImpl;
+import com.tapestry5book.services.impl.TrackEncoder;
+import com.tapestry5book.services.impl.TrackPriceServiceImpl;
 
 public class AppModule {
 	public static void bind(ServiceBinder binder) {
 		// binder.bind(MyServiceInterface.class, MyServiceImpl.class);
 		binder.bind(BlogService.class, BlogServiceImpl.class);
-
+		binder.bind(TrackPriceService.class, TrackPriceServiceImpl.class);
 	}
 
 	public static void contributeApplicationDefaults(
@@ -109,7 +117,8 @@ public class AppModule {
 	@Contribute(ValueEncoderSource.class)
 	public static void provideEncoders(
 			MappedConfiguration<Class, ValueEncoderFactory> configuration,
-			final BlogService blogService) {
+			final BlogService blogService,
+			MusicLibrary musicLibrary) {
 		/*
 		 * ValueEncoderFactory<Article> factory = new
 		 * ValueEncoderFactory<Article>() { public ValueEncoder<Article>
@@ -117,7 +126,9 @@ public class AppModule {
 		 * ArticleEncoder(blogService); } }; configuration.add(Article.class,
 		 * factory);
 		 */
-//		contributeEncoder(configuration, Article.class, new ArticleEncoder(blogService));
+		// contributeEncoder(configuration, Article.class, new
+		// ArticleEncoder(blogService));
+		contributeEncoder(configuration, Track.class, new TrackEncoder(musicLibrary));
 	}
 
 	private static <T> void contributeEncoder(
@@ -139,5 +150,36 @@ public class AppModule {
 			HibernateTransactionAdvisor advisor, MethodAdviceReceiver receiver) {
 		advisor.addTransactionCommitAdvice(receiver);
 	}
+
+	@Contribute(ApplicationStateManager.class)
+	public static void provideApplicationStateContributions(
+			final MappedConfiguration<Class, ApplicationStateContribution> configuration,
+			final BlogService blogService,
+			final TrackPriceService trackPriceService) {
+
+		final ApplicationStateCreator<Blog> blogCreator = new ApplicationStateCreator<Blog>() {
+			public Blog create() {
+				return blogService.findBlog();
+			}
+
+		};
+
+		ApplicationStateCreator<ShoppingCart> shoppingCartCreator = new ApplicationStateCreator<ShoppingCart>() {
+			public ShoppingCart create() {
+				return new ShoppingCart(trackPriceService);
+			}
+		};
+
+		configuration.add(Blog.class, new ApplicationStateContribution(
+				PersistenceConstants.SESSION, blogCreator));
+
+		configuration.add(ShoppingCart.class, new ApplicationStateContribution(
+				PersistenceConstants.SESSION, shoppingCartCreator));
+	}
+	
+	public MusicLibrary buildMusicLibrary(Logger logger) {
+        return new MusicLibraryImpl(logger);
+    }
+
 
 }
