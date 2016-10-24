@@ -27,11 +27,11 @@ Demo pages for chapter 4:
     <a t:type="pagelink" page="chapter04/flashdemo">Using flash persistence strategy for persistent properties</a>
 </p>
 
-<!-- <p>
+<p>
     <a t:type="pagelink" page="chapter04/discarddemo">Discarding values of persistent fields</a>
 </p>
 
-<p>
+<!-- <p>
     <a t:type="pagelink" page="chapter04/viewcart">Working with session state objects</a>
 </p> -->
 
