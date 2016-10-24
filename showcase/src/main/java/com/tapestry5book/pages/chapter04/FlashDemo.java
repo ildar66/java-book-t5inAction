@@ -1,11 +1,14 @@
 package com.tapestry5book.pages.chapter04;
 
+import java.util.Random;
+
 import org.apache.tapestry5.PersistenceConstants;
+//import org.apache.tapestry5.annotations.Meta;
 import org.apache.tapestry5.annotations.PageReset;
 import org.apache.tapestry5.annotations.Persist;
 import org.apache.tapestry5.annotations.Property;
-
-import java.util.Random;
+//@Meta("tapestry.persistence-strategy=flash")
+//@Meta(SymbolConstants.PERSISTENCE_STRATEGY + "=" + PersistenceConstants.FLASH)
 
 public class FlashDemo {
 	@Property
