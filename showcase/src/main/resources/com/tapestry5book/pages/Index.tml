@@ -9,10 +9,10 @@
      <p>
         <a t:type="pagelink" t:page="chapter04/index">Chapter 4: Developing stateful applications</a>
     </p>
-<!--    <p>
+    <p>
         <a t:type="pagelink" t:page="chapter05/index">Chapter 5: Localization</a>
     </p>
-    <p>
+<!--    <p>
         <a t:type="pagelink" t:page="chapter06/index">Chapter 6: Forms and user input validation</a>
     </p>
     <p>
