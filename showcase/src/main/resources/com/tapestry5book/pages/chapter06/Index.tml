@@ -31,11 +31,11 @@ Demo pages:
     <a t:type="pagelink" t:page="chapter06/blog/v3/index">Form for commenting on blog articles</a>
 </p>
 
-<!-- <p>
+<p>
     <a t:type="pagelink" t:page="chapter06/blog/v4/login">Login form with Remember Me feature</a>
 </p>
 
-<p>
+<!-- <p>
     <a t:type="pagelink" t:page="chapter06/radiodemo">Radio buttons demo</a>
 </p>
 
