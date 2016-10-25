@@ -1,0 +1,9 @@
+<html t:type="layout" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
+
+    <div t:type="alerts"/>
+
+    <div t:id="iff">
+        Welcome, ${user.name}!
+    </div>
+
+</html>

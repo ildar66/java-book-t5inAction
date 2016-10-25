@@ -27,14 +27,21 @@ import org.slf4j.Logger;
 import com.tapestry5book.entities.Blog;
 import com.tapestry5book.entities.ShoppingCart;
 import com.tapestry5book.entities.Track;
+import com.tapestry5book.services.impl.AuthenticatorImpl;
 import com.tapestry5book.services.impl.BlogServiceImpl;
 import com.tapestry5book.services.impl.MusicLibraryImpl;
+import com.tapestry5book.services.impl.PasswordPolicyServiceImpl;
 import com.tapestry5book.services.impl.TrackEncoder;
 import com.tapestry5book.services.impl.TrackPriceServiceImpl;
+import com.tapestry5book.services.impl.UserDaoImpl;
 
 public class AppModule {
 	public static void bind(ServiceBinder binder) {
 		// binder.bind(MyServiceInterface.class, MyServiceImpl.class);
+		binder.bind(Authenticator.class, AuthenticatorImpl.class);
+		binder.bind(PasswordPolicyService.class, PasswordPolicyServiceImpl.class);
+		binder.bind(UserDao.class, UserDaoImpl.class);
+		
 		binder.bind(BlogService.class, BlogServiceImpl.class);
 		binder.bind(TrackPriceService.class, TrackPriceServiceImpl.class);
 	}
