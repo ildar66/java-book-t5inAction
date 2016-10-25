@@ -27,6 +27,10 @@ Demo pages:
 </p>
 
 <p>
+    <a t:type="pagelink" t:page="chapter05/messageprefixdemo">Accessing localized messages from prefix templates</a>
+</p>
+
+<p>
     <a t:type="pagelink" t:page="chapter05/chooselanguage">Switching the application's language</a>
 </p>
 
@@ -39,11 +43,11 @@ Demo pages:
 </p>
 
 <p>
-    <a t:type="pagelink" page="chapter05/contextprefixdemo">Using <i>context</i> binding prefix</a>
+    <a t:type="pagelink" t:page="chapter05/contextprefixdemo">Using <i>context</i> binding prefix</a>
 </p>
 
-<!-- <p>
-    <a t:type="pagelink" page="chapter05/localizedcssjavascriptdemo">Localizing CSS and JavaScript</a>
+<p>
+    <a t:type="pagelink" t:page="chapter05/localizedcssjavascriptdemo">Localizing CSS and JavaScript</a>
 </p>
- -->
+ 
 </html>
