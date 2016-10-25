@@ -26,11 +26,11 @@ Demo pages:
     <a t:type="pagelink" page="chapter05/messagesdemo">Accessing localized messages from templates</a>
 </p>
 
-<!-- <p>
+<p>
     <a t:type="pagelink" page="chapter05/chooselanguage">Switching the application's language</a>
 </p>
 
-<p>
+<!-- <p>
     <a t:type="pagelink" page="chapter05/localedemo">Accessing the Locale of the current request</a>
 </p>
 
