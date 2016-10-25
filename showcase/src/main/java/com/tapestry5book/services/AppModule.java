@@ -24,6 +24,7 @@ import org.apache.tapestry5.services.RequestHandler;
 import org.apache.tapestry5.services.Response;
 import org.apache.tapestry5.services.ValueEncoderFactory;
 import org.apache.tapestry5.services.ValueEncoderSource;
+import org.apache.tapestry5.validator.ValidatorMacro;
 import org.slf4j.Logger;
 
 import com.tapestry5book.entities.Blog;
@@ -43,16 +44,14 @@ public class AppModule {
 	public static void bind(ServiceBinder binder) {
 		// binder.bind(MyServiceInterface.class, MyServiceImpl.class);
 		binder.bind(Authenticator.class, AuthenticatorImpl.class);
-		binder.bind(PasswordPolicyService.class,
-				PasswordPolicyServiceImpl.class);
+		binder.bind(PasswordPolicyService.class, PasswordPolicyServiceImpl.class);
 		binder.bind(UserDao.class, UserDaoImpl.class);
 
 		binder.bind(BlogService.class, BlogServiceImpl.class);
 		binder.bind(TrackPriceService.class, TrackPriceServiceImpl.class);
 	}
 
-	public static void contributeApplicationDefaults(
-			MappedConfiguration<String, String> configuration) {
+	public static void contributeApplicationDefaults(MappedConfiguration<String, String> configuration) {
 
 		// The factory default is true but during the early stages of an
 		// application
@@ -64,28 +63,23 @@ public class AppModule {
 	}
 
 	/**
-	 * This is a service definition, the service will be named "TimingFilter".
-	 * The interface, RequestFilter, is used within the RequestHandler service
-	 * pipeline, which is built from the RequestHandler service configuration.
-	 * Tapestry IoC is responsible for passing in an appropriate Logger
-	 * instance. Requests for static resources are handled at a higher level, so
-	 * this filter will only be invoked for Tapestry related requests.
+	 * This is a service definition, the service will be named "TimingFilter". The interface, RequestFilter, is used
+	 * within the RequestHandler service pipeline, which is built from the RequestHandler service configuration.
+	 * Tapestry IoC is responsible for passing in an appropriate Logger instance. Requests for static resources are
+	 * handled at a higher level, so this filter will only be invoked for Tapestry related requests.
 	 * <p/>
 	 * <p/>
-	 * Service builder methods are useful when the implementation is inline as
-	 * an inner class (as here) or require some other kind of special
-	 * initialization. In most cases, use the static bind() method instead.
+	 * Service builder methods are useful when the implementation is inline as an inner class (as here) or require some
+	 * other kind of special initialization. In most cases, use the static bind() method instead.
 	 * <p/>
 	 * <p/>
-	 * If this method was named "build", then the service id would be taken from
-	 * the service interface and would be "RequestFilter". Since Tapestry
-	 * already defines a service named "RequestFilter" we use an explicit
-	 * service id that we can reference inside the contribution method.
+	 * If this method was named "build", then the service id would be taken from the service interface and would be
+	 * "RequestFilter". Since Tapestry already defines a service named "RequestFilter" we use an explicit service id
+	 * that we can reference inside the contribution method.
 	 */
 	public RequestFilter buildTimingFilter(final Logger log) {
 		return new RequestFilter() {
-			public boolean service(Request request, Response response,
-					RequestHandler handler) throws IOException {
+			public boolean service(Request request, Response response, RequestHandler handler) throws IOException {
 				long startTime = System.currentTimeMillis();
 
 				try {
@@ -106,18 +100,14 @@ public class AppModule {
 	}
 
 	/**
-	 * This is a contribution to the RequestHandler service configuration. This
-	 * is how we extend Tapestry using the timing filter. A common use for this
-	 * kind of filter is transaction management or security. The
+	 * This is a contribution to the RequestHandler service configuration. This is how we extend Tapestry using the
+	 * timing filter. A common use for this kind of filter is transaction management or security. The
 	 * 
-	 * @Local annotation selects the desired service by type, but only from the
-	 *        same module. Without
-	 * @Local, there would be an error due to the other service(s) that
-	 *         implement RequestFilter (defined in other modules).
+	 * @Local annotation selects the desired service by type, but only from the same module. Without
+	 * @Local, there would be an error due to the other service(s) that implement RequestFilter (defined in other
+	 *         modules).
 	 */
-	public void contributeRequestHandler(
-			OrderedConfiguration<RequestFilter> configuration,
-			@Local RequestFilter filter) {
+	public void contributeRequestHandler(OrderedConfiguration<RequestFilter> configuration, @Local RequestFilter filter) {
 		// Each contribution to an ordered configuration has a name, When
 		// necessary, you may
 		// set constraints to precisely control the invocation order of the
@@ -128,24 +118,19 @@ public class AppModule {
 	}
 
 	@Contribute(ValueEncoderSource.class)
-	public static void provideEncoders(
-			MappedConfiguration<Class, ValueEncoderFactory> configuration,
+	public static void provideEncoders(MappedConfiguration<Class, ValueEncoderFactory> configuration,
 			final BlogService blogService, MusicLibrary musicLibrary) {
 		/*
-		 * ValueEncoderFactory<Article> factory = new
-		 * ValueEncoderFactory<Article>() { public ValueEncoder<Article>
-		 * create(Class<Article> clazz) { return new
-		 * ArticleEncoder(blogService); } }; configuration.add(Article.class,
+		 * ValueEncoderFactory<Article> factory = new ValueEncoderFactory<Article>() { public ValueEncoder<Article>
+		 * create(Class<Article> clazz) { return new ArticleEncoder(blogService); } }; configuration.add(Article.class,
 		 * factory);
 		 */
 		// contributeEncoder(configuration, Article.class, new
 		// ArticleEncoder(blogService));
-		contributeEncoder(configuration, Track.class, new TrackEncoder(
-				musicLibrary));
+		contributeEncoder(configuration, Track.class, new TrackEncoder(musicLibrary));
 	}
 
-	private static <T> void contributeEncoder(
-			MappedConfiguration<Class, ValueEncoderFactory> configuration,
+	private static <T> void contributeEncoder(MappedConfiguration<Class, ValueEncoderFactory> configuration,
 			Class<T> clazz, final ValueEncoder<T> encoder) {
 
 		ValueEncoderFactory<T> factory = new ValueEncoderFactory<T>() {
@@ -159,16 +144,14 @@ public class AppModule {
 	}
 
 	@Advise(serviceInterface = BlogService.class)
-	public static void adviseTransactionally(
-			HibernateTransactionAdvisor advisor, MethodAdviceReceiver receiver) {
+	public static void adviseTransactionally(HibernateTransactionAdvisor advisor, MethodAdviceReceiver receiver) {
 		advisor.addTransactionCommitAdvice(receiver);
 	}
 
 	@Contribute(ApplicationStateManager.class)
 	public static void provideApplicationStateContributions(
 			final MappedConfiguration<Class, ApplicationStateContribution> configuration,
-			final BlogService blogService,
-			final TrackPriceService trackPriceService) {
+			final BlogService blogService, final TrackPriceService trackPriceService) {
 
 		final ApplicationStateCreator<Blog> blogCreator = new ApplicationStateCreator<Blog>() {
 			public Blog create() {
@@ -183,11 +166,10 @@ public class AppModule {
 			}
 		};
 
-		configuration.add(Blog.class, new ApplicationStateContribution(
-				PersistenceConstants.SESSION, blogCreator));
+		configuration.add(Blog.class, new ApplicationStateContribution(PersistenceConstants.SESSION, blogCreator));
 
-		configuration.add(ShoppingCart.class, new ApplicationStateContribution(
-				PersistenceConstants.SESSION, shoppingCartCreator));
+		configuration.add(ShoppingCart.class, new ApplicationStateContribution(PersistenceConstants.SESSION,
+				shoppingCartCreator));
 	}
 
 	public MusicLibrary buildMusicLibrary(Logger logger) {
@@ -201,6 +183,11 @@ public class AppModule {
 	@Startup
 	public static void initDemoData(@Autobuild final DemoDataSource source) {
 		source.create();
+	}
+
+	@Contribute(ValidatorMacro.class)
+	public static void combineValidators(MappedConfiguration<String, String> configuration) {
+		configuration.add("requiredMinMax", "required,minlength=3,maxlength=50");
 	}
 
 }

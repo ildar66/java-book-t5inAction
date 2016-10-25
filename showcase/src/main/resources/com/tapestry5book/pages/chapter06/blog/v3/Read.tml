@@ -1,6 +1,6 @@
 <html t:type="layout" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
 
-    <h2><a t:type="pagelink" page="chapter06/blog/v3/read">${article.title}</a></h2>
+    <h2><a t:type="pagelink" t:page="chapter06/blog/v3/read">${article.title}</a></h2>
 
     <div t:type="output" value="article.publishDate" format="literal:d MMM, yyyy"/>
 
@@ -39,13 +39,13 @@
             <textarea t:type="textarea" value="comment.content" cols="50" rows="10" validate="required"/>
         </div>
 
-        <div class="form-row">
+<!--         <div class="form-row">
             <div class="kaptcha-image">
                 <img t:type="kaptchaImage"/>
             </div>
             <input t:type="kaptchafield" label="Word Verification" t:id="kaptchaField" image="kaptchaImage"/>
             <label t:type="label" for="kaptchaField"/>
-        </div>
+        </div> -->
 
         <div>
             <input type="submit" value="Submit Comment"/>
