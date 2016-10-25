@@ -30,11 +30,11 @@ Demo pages:
     <a t:type="pagelink" page="chapter05/chooselanguage">Switching the application's language</a>
 </p>
 
-<!-- <p>
-    <a t:type="pagelink" page="chapter05/localedemo">Accessing the Locale of the current request</a>
+<p>
+    <a t:type="pagelink" t:page="chapter05/localedemo">Accessing the Locale of the current request</a>
 </p>
 
-<p>
+<!-- <p>
     <a t:type="pagelink" page="chapter05/localizedtemplatedemo">Localizing templates</a>
 </p>
 
