@@ -1,0 +1,11 @@
+<html xmlns:t="http://tapestry.apache.org/schema/
+tapestry_5_3.xsd">
+<head>
+	<title>Tapestry 5 Book</title>
+	<link rel="stylesheet" type="text/css" href="${css}"/>
+	<script type="text/javascript" src="${jsLib}" />
+</head>
+<body>
+	<img src="${logo}" />
+</body>
+</html>
