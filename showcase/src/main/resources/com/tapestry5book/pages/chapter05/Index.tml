@@ -38,11 +38,11 @@ Demo pages:
     <a t:type="pagelink" t:page="chapter05/localizedtemplatedemo">Localizing templates</a>
 </p>
 
-<!-- <p>
+<p>
     <a t:type="pagelink" page="chapter05/contextprefixdemo">Using <i>context</i> binding prefix</a>
 </p>
 
-<p>
+<!-- <p>
     <a t:type="pagelink" page="chapter05/localizedcssjavascriptdemo">Localizing CSS and JavaScript</a>
 </p>
  -->
