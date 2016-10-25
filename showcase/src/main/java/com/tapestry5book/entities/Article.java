@@ -31,14 +31,14 @@ public class Article {
 
     @ManyToMany
     private List<Tag> tags = new ArrayList<Tag>();
-
+*/
     @OneToMany(cascade = CascadeType.ALL)
     private List<Comment> comments = new ArrayList<Comment>();
 
     public Article() {
         super();
     }
-*/
+
     public Long getId() {
         return this.id;
     }
@@ -78,7 +78,7 @@ public class Article {
     public void setBlog(final Blog blog) {
         this.blog = blog;
     }
-
+*/
     public List<Comment> getComments() {
         return comments;
     }
@@ -86,7 +86,7 @@ public class Article {
     public void setComments(List<Comment> comments) {
         this.comments = comments;
     }
-
+/*
     public List<Tag> getTags() {
         return tags;
     }
@@ -94,6 +94,6 @@ public class Article {
     public void setTags(List<Tag> tags) {
         this.tags = tags;
     }
+*/
 
-
-*/}
+}
