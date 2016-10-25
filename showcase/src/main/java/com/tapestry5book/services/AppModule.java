@@ -48,6 +48,7 @@ public class AppModule {
 		// overridden
 		// on the command line as -Dtapestry.production-mode=false
 		configuration.add(SymbolConstants.PRODUCTION_MODE, "false");
+		configuration.add(SymbolConstants.SUPPORTED_LOCALES, "en,de,ru,iw");
 	}
 
 	/**
@@ -117,8 +118,7 @@ public class AppModule {
 	@Contribute(ValueEncoderSource.class)
 	public static void provideEncoders(
 			MappedConfiguration<Class, ValueEncoderFactory> configuration,
-			final BlogService blogService,
-			MusicLibrary musicLibrary) {
+			final BlogService blogService, MusicLibrary musicLibrary) {
 		/*
 		 * ValueEncoderFactory<Article> factory = new
 		 * ValueEncoderFactory<Article>() { public ValueEncoder<Article>
@@ -128,7 +128,8 @@ public class AppModule {
 		 */
 		// contributeEncoder(configuration, Article.class, new
 		// ArticleEncoder(blogService));
-		contributeEncoder(configuration, Track.class, new TrackEncoder(musicLibrary));
+		contributeEncoder(configuration, Track.class, new TrackEncoder(
+				musicLibrary));
 	}
 
 	private static <T> void contributeEncoder(
@@ -176,10 +177,9 @@ public class AppModule {
 		configuration.add(ShoppingCart.class, new ApplicationStateContribution(
 				PersistenceConstants.SESSION, shoppingCartCreator));
 	}
-	
-	public MusicLibrary buildMusicLibrary(Logger logger) {
-        return new MusicLibraryImpl(logger);
-    }
 
+	public MusicLibrary buildMusicLibrary(Logger logger) {
+		return new MusicLibraryImpl(logger);
+	}
 
 }
