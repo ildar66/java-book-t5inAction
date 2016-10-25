@@ -23,22 +23,22 @@
 
 Demo pages:
 <p>
-    <a t:type="pagelink" page="chapter05/messagesdemo">Accessing localized messages from templates</a>
+    <a t:type="pagelink" t:page="chapter05/messagesdemo">Accessing localized messages from templates</a>
 </p>
 
 <p>
-    <a t:type="pagelink" page="chapter05/chooselanguage">Switching the application's language</a>
+    <a t:type="pagelink" t:page="chapter05/chooselanguage">Switching the application's language</a>
 </p>
 
 <p>
     <a t:type="pagelink" t:page="chapter05/localedemo">Accessing the Locale of the current request</a>
 </p>
 
-<!-- <p>
-    <a t:type="pagelink" page="chapter05/localizedtemplatedemo">Localizing templates</a>
+<p>
+    <a t:type="pagelink" t:page="chapter05/localizedtemplatedemo">Localizing templates</a>
 </p>
 
-<p>
+<!-- <p>
     <a t:type="pagelink" page="chapter05/contextprefixdemo">Using <i>context</i> binding prefix</a>
 </p>
 
