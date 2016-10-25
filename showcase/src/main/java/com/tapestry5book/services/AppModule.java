@@ -11,8 +11,10 @@ import org.apache.tapestry5.ioc.MethodAdviceReceiver;
 import org.apache.tapestry5.ioc.OrderedConfiguration;
 import org.apache.tapestry5.ioc.ServiceBinder;
 import org.apache.tapestry5.ioc.annotations.Advise;
+import org.apache.tapestry5.ioc.annotations.Autobuild;
 import org.apache.tapestry5.ioc.annotations.Contribute;
 import org.apache.tapestry5.ioc.annotations.Local;
+import org.apache.tapestry5.ioc.annotations.Startup;
 import org.apache.tapestry5.services.ApplicationStateContribution;
 import org.apache.tapestry5.services.ApplicationStateCreator;
 import org.apache.tapestry5.services.ApplicationStateManager;
@@ -29,6 +31,8 @@ import com.tapestry5book.entities.ShoppingCart;
 import com.tapestry5book.entities.Track;
 import com.tapestry5book.services.impl.AuthenticatorImpl;
 import com.tapestry5book.services.impl.BlogServiceImpl;
+import com.tapestry5book.services.impl.DemoDataParser;
+import com.tapestry5book.services.impl.DemoDataSource;
 import com.tapestry5book.services.impl.MusicLibraryImpl;
 import com.tapestry5book.services.impl.PasswordPolicyServiceImpl;
 import com.tapestry5book.services.impl.TrackEncoder;
@@ -39,9 +43,10 @@ public class AppModule {
 	public static void bind(ServiceBinder binder) {
 		// binder.bind(MyServiceInterface.class, MyServiceImpl.class);
 		binder.bind(Authenticator.class, AuthenticatorImpl.class);
-		binder.bind(PasswordPolicyService.class, PasswordPolicyServiceImpl.class);
+		binder.bind(PasswordPolicyService.class,
+				PasswordPolicyServiceImpl.class);
 		binder.bind(UserDao.class, UserDaoImpl.class);
-		
+
 		binder.bind(BlogService.class, BlogServiceImpl.class);
 		binder.bind(TrackPriceService.class, TrackPriceServiceImpl.class);
 	}
@@ -187,6 +192,15 @@ public class AppModule {
 
 	public MusicLibrary buildMusicLibrary(Logger logger) {
 		return new MusicLibraryImpl(logger);
+	}
+
+	public static DemoDataParser buildDemoDataParser(Logger logger) {
+		return new DemoDataParser(logger);
+	}
+
+	@Startup
+	public static void initDemoData(@Autobuild final DemoDataSource source) {
+		source.create();
 	}
 
 }

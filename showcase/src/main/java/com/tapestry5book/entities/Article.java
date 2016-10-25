@@ -10,90 +10,89 @@ import java.util.List;
 
 @Entity
 public class Article {
-    @Id
-    @GeneratedValue
-    @NonVisual
-    private Long id;
- 
-    @Column
-    @Validate("required")
-    private String title;
+	@Id
+	@GeneratedValue
+	@NonVisual
+	private Long id;
 
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date publishDate;
+	@Column
+	@Validate("required")
+	private String title;
 
-    @Column
-    @Validate("required")
-    private String content;
-    /*
-    @ManyToOne(optional = false)
-    private Blog blog;
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date publishDate;
 
-    @ManyToMany
-    private List<Tag> tags = new ArrayList<Tag>();
-*/
-    @OneToMany(cascade = CascadeType.ALL)
-    private List<Comment> comments = new ArrayList<Comment>();
+	@Column
+	@Validate("required")
+	private String content;
 
-    public Article() {
-        super();
-    }
+	@ManyToOne(optional = false)
+	private Blog blog;
 
-    public Long getId() {
-        return this.id;
-    }
+	@ManyToMany
+	private List<Tag> tags = new ArrayList<Tag>();
 
-    public void setId(final Long id) {
-        this.id = id;
-    }
+	@OneToMany(cascade = CascadeType.ALL)
+	private List<Comment> comments = new ArrayList<Comment>();
 
-    public String getTitle() {
-        return this.title;
-    }
+	public Article() {
+		super();
+	}
 
-    public void setTitle(final String title) {
-        this.title = title;
-    }
+	public Long getId() {
+		return this.id;
+	}
 
-    public Date getPublishDate() {
-        return this.publishDate;
-    }
+	public void setId(final Long id) {
+		this.id = id;
+	}
 
-    public void setPublishDate(final Date publishDate) {
-        this.publishDate = publishDate;
-    }
- 
-    public String getContent() {
-        return this.content;
-    }
+	public String getTitle() {
+		return this.title;
+	}
 
-    public void setContent(final String content) {
-        this.content = content;
-    }
-    /*
-    public Blog getBlog() {
-        return this.blog;
-    }
+	public void setTitle(final String title) {
+		this.title = title;
+	}
 
-    public void setBlog(final Blog blog) {
-        this.blog = blog;
-    }
-*/
-    public List<Comment> getComments() {
-        return comments;
-    }
+	public Date getPublishDate() {
+		return this.publishDate;
+	}
 
-    public void setComments(List<Comment> comments) {
-        this.comments = comments;
-    }
-/*
-    public List<Tag> getTags() {
-        return tags;
-    }
+	public void setPublishDate(final Date publishDate) {
+		this.publishDate = publishDate;
+	}
 
-    public void setTags(List<Tag> tags) {
-        this.tags = tags;
-    }
-*/
+	public String getContent() {
+		return this.content;
+	}
+
+	public void setContent(final String content) {
+		this.content = content;
+	}
+
+	public Blog getBlog() {
+		return this.blog;
+	}
+
+	public void setBlog(final Blog blog) {
+		this.blog = blog;
+	}
+
+	public List<Comment> getComments() {
+		return comments;
+	}
+
+	public void setComments(List<Comment> comments) {
+		this.comments = comments;
+	}
+
+	public List<Tag> getTags() {
+		return tags;
+	}
+
+	public void setTags(List<Tag> tags) {
+		this.tags = tags;
+	}
 
 }

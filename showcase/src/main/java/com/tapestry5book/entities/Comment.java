@@ -2,11 +2,11 @@ package com.tapestry5book.entities;
 
 import org.apache.tapestry5.beaneditor.NonVisual;
 
-//import javax.persistence.*;
+import javax.persistence.*;
 import java.util.Date;
 
-//@Entity
-public class Comment {/*
+@Entity
+public class Comment {
 
     @Id
     @GeneratedValue
@@ -81,4 +81,4 @@ public class Comment {/*
     }
 
 
-*/}
+}
