@@ -43,11 +43,19 @@ Demo pages:
     <a t:type="pagelink" t:page="chapter06/radioenumdemo">Radio buttons with enums demo</a>
 </p>
 
-<!-- <p>
-    <a t:type="pagelink" t:page="chapter06/palettedemo">Using Palette component for multiple selection</a>
+<p>
+    <a t:type="pagelink" t:page="chapter06/selectDemo">Select demo</a>
 </p>
 
 <p>
+    <a t:type="pagelink" t:page="chapter06/selectEnumDemo">Select enum demo</a>
+</p>
+
+<p>
+    <a t:type="pagelink" t:page="chapter06/palettedemo">Using Palette component for multiple selection</a>
+</p>
+
+<!-- <p>
     <a t:type="pagelink" t:page="chapter06/checklistdemo">Using Checklist component for multiple selection</a>
 </p>
 
