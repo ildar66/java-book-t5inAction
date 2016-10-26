@@ -24,7 +24,6 @@ import org.apache.tapestry5.services.RequestHandler;
 import org.apache.tapestry5.services.Response;
 import org.apache.tapestry5.services.ValueEncoderFactory;
 import org.apache.tapestry5.services.ValueEncoderSource;
-import org.apache.tapestry5.upload.services.UploadSymbols;
 import org.apache.tapestry5.validator.ValidatorMacro;
 import org.slf4j.Logger;
 
@@ -37,6 +36,7 @@ import com.tapestry5book.services.impl.DemoDataParser;
 import com.tapestry5book.services.impl.DemoDataSource;
 import com.tapestry5book.services.impl.MusicLibraryImpl;
 import com.tapestry5book.services.impl.PasswordPolicyServiceImpl;
+import com.tapestry5book.services.impl.ReportServiceImpl;
 import com.tapestry5book.services.impl.TrackEncoder;
 import com.tapestry5book.services.impl.TrackPriceServiceImpl;
 import com.tapestry5book.services.impl.UserDaoImpl;
@@ -50,6 +50,8 @@ public class AppModule {
 
 		binder.bind(BlogService.class, BlogServiceImpl.class);
 		binder.bind(TrackPriceService.class, TrackPriceServiceImpl.class);
+
+		binder.bind(ReportService.class, ReportServiceImpl.class);
 	}
 
 	public static void contributeApplicationDefaults(MappedConfiguration<String, String> configuration) {
@@ -61,7 +63,7 @@ public class AppModule {
 		// on the command line as -Dtapestry.production-mode=false
 		configuration.add(SymbolConstants.PRODUCTION_MODE, "false");
 		configuration.add(SymbolConstants.SUPPORTED_LOCALES, "en,de,ru,iw");
-		
+
 		// Configuration of file uploads
 		// configuration.add(UploadSymbols.REPOSITORY_THRESHOLD, "5120");
 		// configuration.add(UploadSymbols.REPOSITORY_LOCATION, System.getProperty("java.io.tmpdir"));
