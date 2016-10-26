@@ -39,11 +39,11 @@ Demo pages:
     <a t:type="pagelink" t:page="chapter06/radiodemo">Radio buttons demo</a>
 </p>
 
-<!-- <p>
+<p>
     <a t:type="pagelink" t:page="chapter06/radioenumdemo">Radio buttons with enums demo</a>
 </p>
 
-<p>
+<!-- <p>
     <a t:type="pagelink" t:page="chapter06/palettedemo">Using Palette component for multiple selection</a>
 </p>
 
