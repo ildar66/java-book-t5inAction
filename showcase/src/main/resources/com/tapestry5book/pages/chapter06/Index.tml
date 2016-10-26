@@ -79,4 +79,8 @@ Demo pages:
     <a t:type="pagelink" t:page="chapter06/viewReport">View Report demo</a>
 </p>
 
+<p>
+    <a t:type="pagelink" t:page="chapter06/voteAdmin">Vote Admin demo</a>
+</p>
+
 </html>

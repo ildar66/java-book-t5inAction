@@ -40,6 +40,7 @@ import com.tapestry5book.services.impl.ReportServiceImpl;
 import com.tapestry5book.services.impl.TrackEncoder;
 import com.tapestry5book.services.impl.TrackPriceServiceImpl;
 import com.tapestry5book.services.impl.UserDaoImpl;
+import com.tapestry5book.services.impl.VoteServiceImpl;
 
 public class AppModule {
 	public static void bind(ServiceBinder binder) {
@@ -52,6 +53,7 @@ public class AppModule {
 		binder.bind(TrackPriceService.class, TrackPriceServiceImpl.class);
 
 		binder.bind(ReportService.class, ReportServiceImpl.class);
+		binder.bind(VoteService.class, VoteServiceImpl.class);
 	}
 
 	public static void contributeApplicationDefaults(MappedConfiguration<String, String> configuration) {
