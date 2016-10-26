@@ -55,11 +55,11 @@ Demo pages:
     <a t:type="pagelink" t:page="chapter06/palettedemo">Using Palette component for multiple selection</a>
 </p>
 
-<!-- <p>
+ <p>
     <a t:type="pagelink" t:page="chapter06/checklistdemo">Using Checklist component for multiple selection</a>
 </p>
 
-<p>
+<!--<p>
     <a t:type="pagelink" t:page="chapter06/datefielddemo">Date input</a>
 </p>
 
