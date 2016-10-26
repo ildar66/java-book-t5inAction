@@ -67,8 +67,8 @@ Demo pages:
     <a t:type="pagelink" t:page="chapter06/blog/upload">Uploading files</a>
 </p>
 
-<!--<p>
+<p>
     <a t:type="pagelink" t:page="chapter06/alertsdemo">Alerts demo</a>
 </p>
- -->
+
 </html>
