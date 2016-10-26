@@ -71,4 +71,8 @@ Demo pages:
     <a t:type="pagelink" t:page="chapter06/alertsdemo">Alerts demo</a>
 </p>
 
+<p>
+    <a t:type="pagelink" t:page="chapter06/blog/post">Post demo</a>
+</p>
+
 </html>
