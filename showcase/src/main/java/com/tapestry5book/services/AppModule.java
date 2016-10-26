@@ -24,6 +24,7 @@ import org.apache.tapestry5.services.RequestHandler;
 import org.apache.tapestry5.services.Response;
 import org.apache.tapestry5.services.ValueEncoderFactory;
 import org.apache.tapestry5.services.ValueEncoderSource;
+import org.apache.tapestry5.upload.services.UploadSymbols;
 import org.apache.tapestry5.validator.ValidatorMacro;
 import org.slf4j.Logger;
 
@@ -60,6 +61,12 @@ public class AppModule {
 		// on the command line as -Dtapestry.production-mode=false
 		configuration.add(SymbolConstants.PRODUCTION_MODE, "false");
 		configuration.add(SymbolConstants.SUPPORTED_LOCALES, "en,de,ru,iw");
+		
+		// Configuration of file uploads
+		// configuration.add(UploadSymbols.REPOSITORY_THRESHOLD, "5120");
+		// configuration.add(UploadSymbols.REPOSITORY_LOCATION, System.getProperty("java.io.tmpdir"));
+		// configuration.add(UploadSymbols.REQUESTSIZE_MAX, "-1");
+		// configuration.add(UploadSymbols.FILESIZE_MAX, "1048576");
 	}
 
 	/**
