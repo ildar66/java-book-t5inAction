@@ -1,0 +1,6 @@
+<html t:type="layout" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
+
+    <form t:type="beaneditform" t:id="loginForm" object="user"
+          submitLabel="message:submit-value" model="model" clientValidation="none"/>
+
+</html>
