@@ -84,7 +84,11 @@ Demo pages:
 </p>
 
 <p>
-    <a t:type="pagelink" t:page="chapter06/formFragmentDemo">Fragmenting forms</a>
+    <a t:type="pagelink" t:page="chapter06/formFragmentDemo">Fragmenting forms demo</a>
+</p>
+
+<p>
+    <a t:type="pagelink" t:page="chapter06/translatorDemo">Translator demo</a>
 </p>
 
 </html>

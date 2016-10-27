@@ -1,9 +1,11 @@
 package com.tapestry5book.services;
 
 import java.io.IOException;
+import java.util.Currency;
 
 import org.apache.tapestry5.PersistenceConstants;
 import org.apache.tapestry5.SymbolConstants;
+import org.apache.tapestry5.Translator;
 import org.apache.tapestry5.ValueEncoder;
 import org.apache.tapestry5.hibernate.HibernateTransactionAdvisor;
 import org.apache.tapestry5.ioc.MappedConfiguration;
@@ -22,6 +24,7 @@ import org.apache.tapestry5.services.Request;
 import org.apache.tapestry5.services.RequestFilter;
 import org.apache.tapestry5.services.RequestHandler;
 import org.apache.tapestry5.services.Response;
+import org.apache.tapestry5.services.TranslatorSource;
 import org.apache.tapestry5.services.ValueEncoderFactory;
 import org.apache.tapestry5.services.ValueEncoderSource;
 import org.apache.tapestry5.validator.ValidatorMacro;
@@ -32,6 +35,7 @@ import com.tapestry5book.entities.ShoppingCart;
 import com.tapestry5book.entities.Track;
 import com.tapestry5book.services.impl.AuthenticatorImpl;
 import com.tapestry5book.services.impl.BlogServiceImpl;
+import com.tapestry5book.services.impl.CurrencyTranslator;
 import com.tapestry5book.services.impl.DemoDataParser;
 import com.tapestry5book.services.impl.DemoDataSource;
 import com.tapestry5book.services.impl.MusicLibraryImpl;
@@ -199,6 +203,11 @@ public class AppModule {
 	@Contribute(ValidatorMacro.class)
 	public static void combineValidators(MappedConfiguration<String, String> configuration) {
 		configuration.add("requiredMinMax", "required,minlength=3,maxlength=50");
+	}
+
+	@Contribute(TranslatorSource.class)
+	public static void provideTranslators(MappedConfiguration<Class, Translator> configuration) {
+		configuration.add(Currency.class, new CurrencyTranslator());
 	}
 
 }
