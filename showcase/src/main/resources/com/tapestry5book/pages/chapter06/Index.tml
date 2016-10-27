@@ -83,4 +83,8 @@ Demo pages:
     <a t:type="pagelink" t:page="chapter06/voteAdmin">Vote Admin demo</a>
 </p>
 
+<p>
+    <a t:type="pagelink" t:page="chapter06/formFragmentDemo">Fragmenting forms</a>
+</p>
+
 </html>
