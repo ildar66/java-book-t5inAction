@@ -16,10 +16,10 @@
 
 
 Demo pages:
-<!-- <p>
+<p>
     <a t:type="pagelink" page="chapter08/beaneditformdemo">Creating forms with BeanEditForm component</a>
 </p>
-<p>
+<!-- <p>
     <a t:type="pagelink" page="chapter08/login">Creating login form with BeanEditForm component</a>
 </p>
 <p>
