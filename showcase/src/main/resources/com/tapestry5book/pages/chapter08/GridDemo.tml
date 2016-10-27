@@ -1,0 +1,14 @@
+<html t:type="layout" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+
+    <table t:type="grid" source="users" rowsPerPage="5" pagerPosition="both" row="currentUser" empty="emptyBlock">
+        <p:nameHeader>${message:nameHeader}</p:nameHeader>
+        <p:nameCell>
+            <a t:type="pagelink" page="chapter08/beandisplaydemo" context="currentUser">${currentUser.name}</a>
+        </p:nameCell>
+    </table>
+    
+    <t:block id="emptyBlock">No users found</t:block>
+
+</html>
+
