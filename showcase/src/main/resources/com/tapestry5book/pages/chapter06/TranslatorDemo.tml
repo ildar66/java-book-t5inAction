@@ -11,7 +11,8 @@
         <t:errors/>
         <div>
             <label t:type="label" for="currency"/>
-            <input t:type="textfield" t:id="currency" validate="required"/>
+            <!-- <input t:type="textfield" t:id="currency" validate="required"/ -->
+            <input t:type="textfield" t:id="currency" nulls="currency"/>
         </div>
         
         <div>

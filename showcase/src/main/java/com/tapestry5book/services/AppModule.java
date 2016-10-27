@@ -3,6 +3,7 @@ package com.tapestry5book.services;
 import java.io.IOException;
 import java.util.Currency;
 
+import org.apache.tapestry5.NullFieldStrategy;
 import org.apache.tapestry5.PersistenceConstants;
 import org.apache.tapestry5.SymbolConstants;
 import org.apache.tapestry5.Translator;
@@ -20,6 +21,7 @@ import org.apache.tapestry5.ioc.annotations.Startup;
 import org.apache.tapestry5.services.ApplicationStateContribution;
 import org.apache.tapestry5.services.ApplicationStateCreator;
 import org.apache.tapestry5.services.ApplicationStateManager;
+import org.apache.tapestry5.services.NullFieldStrategySource;
 import org.apache.tapestry5.services.Request;
 import org.apache.tapestry5.services.RequestFilter;
 import org.apache.tapestry5.services.RequestHandler;
@@ -35,6 +37,7 @@ import com.tapestry5book.entities.ShoppingCart;
 import com.tapestry5book.entities.Track;
 import com.tapestry5book.services.impl.AuthenticatorImpl;
 import com.tapestry5book.services.impl.BlogServiceImpl;
+import com.tapestry5book.services.impl.CurrencyNullFieldStrategy;
 import com.tapestry5book.services.impl.CurrencyTranslator;
 import com.tapestry5book.services.impl.DemoDataParser;
 import com.tapestry5book.services.impl.DemoDataSource;
@@ -208,6 +211,11 @@ public class AppModule {
 	@Contribute(TranslatorSource.class)
 	public static void provideTranslators(MappedConfiguration<Class, Translator> configuration) {
 		configuration.add(Currency.class, new CurrencyTranslator());
+	}
+
+	@Contribute(NullFieldStrategySource.class)
+	public static void provideNullFieldStrategies(MappedConfiguration<String, NullFieldStrategy> configuration) {
+		configuration.add("currency", new CurrencyNullFieldStrategy());
 	}
 
 }
