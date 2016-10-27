@@ -1,0 +1,14 @@
+<html t:type="layout" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+
+    <form t:type="beaneditform" t:id="loginForm" t:object="user"
+          t:submitLabel="message:submit-value" t:include="name,password,rememberMe" t:clientValidation="none">
+
+        <p:password>
+            <t:label for="password"/>
+            <t:passwordfield t:id="password" value="user.password"/>
+        </p:password>
+
+    </form>
+
+</html>

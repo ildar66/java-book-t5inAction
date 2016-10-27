@@ -19,10 +19,10 @@ Demo pages:
 <p>
     <a t:type="pagelink" page="chapter08/beaneditformdemo">Creating forms with BeanEditForm component</a>
 </p>
-<!-- <p>
+<p>
     <a t:type="pagelink" page="chapter08/login">Creating login form with BeanEditForm component</a>
 </p>
-<p>
+<!-- <p>
     <a t:type="pagelink" page="chapter08/griddemo">Creating a tabular view of a collection of JavaBeans using Grid component</a>
 </p>
 <p>

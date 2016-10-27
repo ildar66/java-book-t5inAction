@@ -1,12 +1,21 @@
 package com.tapestry5book.entities;
 
+import java.net.URL;
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+//import org.apache.tapestry5.beaneditor.DataType;
 import org.apache.tapestry5.beaneditor.NonVisual;
 import org.apache.tapestry5.beaneditor.Validate;
 import org.apache.tapestry5.ioc.annotations.Inject;
-
-import javax.persistence.*;
-import java.net.URL;
-import java.util.Date;
 
 @Entity
 public class User {
@@ -21,6 +30,7 @@ public class User {
 
     @Column(name = "PASSWD")
     @Validate("required")
+    //@DataType("password")
     private String password;
 
     @Column
