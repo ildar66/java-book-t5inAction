@@ -27,7 +27,10 @@
         <t:errors/>
         <div class="form-row">
             <label t:type="label" for="author"/>
-            <input t:type="textfield" t:id="author" value="comment.author" validate="requiredMinMax"/>
+            <!-- <input t:type="textfield" t:id="author" value="comment.author"
+            	 t:validate="required,minlength=2,maxlength=50"/> -->
+            <!-- define requiredMinMax in AppModule:  @Contribute(ValidatorMacro.class) -->
+            <input t:type="textfield" t:id="author" value="comment.author" t:validate="requiredMinMax"/>
         </div>
 
         <div class="form-row">
