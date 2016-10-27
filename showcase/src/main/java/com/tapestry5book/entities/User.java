@@ -12,10 +12,10 @@ import javax.persistence.Id;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-//import org.apache.tapestry5.beaneditor.DataType;
 import org.apache.tapestry5.beaneditor.NonVisual;
 import org.apache.tapestry5.beaneditor.Validate;
 import org.apache.tapestry5.ioc.annotations.Inject;
+//import org.apache.tapestry5.beaneditor.DataType;
 
 @Entity
 public class User {
@@ -29,8 +29,9 @@ public class User {
     private String name;
 
     @Column(name = "PASSWD")
-    @Validate("required")
+    //@Validate("required")
     //@DataType("password")
+    @Validate("required,minlength=5,regexp=[a-zA-Z]+")
     private String password;
 
     @Column
