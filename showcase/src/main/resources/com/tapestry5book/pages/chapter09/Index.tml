@@ -1,23 +1,13 @@
 <html t:type="indexlayout" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
 <div>
-    This chapter covers:
-    <ul>
-        <li>
-           Creating custom components
-        </li>
-        <li>
-             Understanding component parameters
-        </li>
-        <li>
-            Component rendering in details
-        </li>
-        <li>
-           Component design patterns
-        </li>
-        <li>
-           Bundling components into libraries
-        </li>
-    </ul>
+	This chapter covers:
+	<ul>
+		<li>Creating custom components</li>
+		<li>Understanding component parameters</li>
+		<li>Component rendering in details</li>
+		<li>Component design patterns</li>
+		<li>Bundling components into libraries</li>
+	</ul>
 </div>
 
 
@@ -28,10 +18,10 @@ Demo pages:
 <p>
     <a t:type="pagelink" page="chapter09/guessnumberdemo">Using GuessNumber component</a>
 </p>
-<!-- <p>
+<p>
     <a t:type="pagelink" page="chapter09/dukedemo">Using Duke component</a>
 </p>
-<p>
+<!-- <p>
     <a t:type="pagelink" page="chapter09/simpleloopdemo">Using SimpleLoop component</a>
 </p>
 <p>

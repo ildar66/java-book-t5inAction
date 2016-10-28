@@ -24,13 +24,23 @@ public class GuessNumber {
 	 * @since 1.0
 	 */
 	// @Parameter(value="0", defaultPrefix=BindingConstants.LITERAL)
-	@Parameter("defaultValueForMinParameter")
+	// @Parameter("defaultValueForMinParameter")
+	@Parameter
 	@Property
 	private int min;
 
 	public int getDefaultValueForMinParameter() {
 		//return AppConstants.ZERO;
 		return 0;
+	}
+	
+	/*
+	 * Per convention the defaultMin() method is considered to be default binding method for the min parameter,
+	 * which is invoked if no value has been bound explicitly.
+	 */
+	int defaultMin() {
+		// return AppConstants.MIN;
+		return 1;
 	}
 
 	/**
