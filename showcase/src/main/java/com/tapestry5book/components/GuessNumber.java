@@ -1,13 +1,14 @@
 package com.tapestry5book.components;
 
+import java.util.Random;
+
+import org.apache.tapestry5.BindingConstants;
 import org.apache.tapestry5.alerts.AlertManager;
 import org.apache.tapestry5.annotations.Parameter;
 import org.apache.tapestry5.annotations.Persist;
 import org.apache.tapestry5.annotations.Property;
 import org.apache.tapestry5.ioc.Messages;
 import org.apache.tapestry5.ioc.annotations.Inject;
-
-import java.util.Random;
 
 /**
  * Component that renders an entire UI for the Guess Number game, known from the Java EE tutorial.
@@ -23,7 +24,7 @@ public class GuessNumber {
      *
      * @since 1.0
      */
-    @Parameter("0")
+    @Parameter(value="0", defaultPrefix=BindingConstants.LITERAL)
     @Property
     private int min;
 
