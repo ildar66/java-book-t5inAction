@@ -9,6 +9,7 @@ import org.apache.tapestry5.SymbolConstants;
 import org.apache.tapestry5.Translator;
 import org.apache.tapestry5.ValueEncoder;
 import org.apache.tapestry5.hibernate.HibernateTransactionAdvisor;
+import org.apache.tapestry5.ioc.Configuration;
 import org.apache.tapestry5.ioc.MappedConfiguration;
 import org.apache.tapestry5.ioc.MethodAdviceReceiver;
 import org.apache.tapestry5.ioc.OrderedConfiguration;
@@ -21,6 +22,11 @@ import org.apache.tapestry5.ioc.annotations.Startup;
 import org.apache.tapestry5.services.ApplicationStateContribution;
 import org.apache.tapestry5.services.ApplicationStateCreator;
 import org.apache.tapestry5.services.ApplicationStateManager;
+import org.apache.tapestry5.services.BeanBlockContribution;
+import org.apache.tapestry5.services.BeanBlockOverrideSource;
+import org.apache.tapestry5.services.BeanBlockSource;
+import org.apache.tapestry5.services.DisplayBlockContribution;
+import org.apache.tapestry5.services.EditBlockContribution;
 import org.apache.tapestry5.services.NullFieldStrategySource;
 import org.apache.tapestry5.services.Request;
 import org.apache.tapestry5.services.RequestFilter;
@@ -216,6 +222,25 @@ public class AppModule {
 	@Contribute(NullFieldStrategySource.class)
 	public static void provideNullFieldStrategies(MappedConfiguration<String, NullFieldStrategy> configuration) {
 		configuration.add("currency", new CurrencyNullFieldStrategy());
+	}
+
+	@Contribute(BeanBlockSource.class)
+	public static void providePropertyBlocks(Configuration<BeanBlockContribution> configuration) {
+
+		/*EditBlockContribution editBlock = new EditBlockContribution("url", "chapter08/AppPropertyEditBlocks",
+				"urlBlock");*/
+
+		DisplayBlockContribution displayBlock = new DisplayBlockContribution("url",
+				"chapter08/AppPropertyDisplayBlocks", "urlBlock");
+
+		//configuration.add(editBlock);
+		configuration.add(displayBlock);
+	}
+
+	@Contribute(BeanBlockOverrideSource.class)
+	public static void overridePropertyBlocks(Configuration<BeanBlockContribution> configuration) {
+
+		configuration.add(new DisplayBlockContribution("date", "chapter08/AppPropertyDisplayBlocks", "dateBlock"));
 	}
 
 }

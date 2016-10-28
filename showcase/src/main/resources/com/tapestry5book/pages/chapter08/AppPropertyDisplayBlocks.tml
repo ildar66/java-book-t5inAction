@@ -1,0 +1,15 @@
+<t:container xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
+    <t:block id="urlBlock">
+        ${url}
+    </t:block>
+
+    <t:block id="dateBlock">
+        <t:output value="date" format="dateFormat"/>
+    </t:block>
+
+</t:container>
+<!-- <div xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
+	<t:block id="dateBlock">
+		<t:output value="date" format="dateFormat" />
+	</t:block>
+</div> -->
