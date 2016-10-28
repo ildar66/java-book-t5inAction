@@ -36,6 +36,7 @@ public class Login2 {
         final BeanModel<User> model = beanModelSource.createEditModel(User.class, messages);
 
         model.include("name", "password","rememberMe");
+        // model.reorder("rememberMe", "password", "name");
 
         final PropertyModel password = model.get("password");
 
