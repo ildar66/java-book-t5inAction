@@ -29,9 +29,9 @@ public class User {
     private String name;
 
     @Column(name = "PASSWD")
-    //@Validate("required")
+    @Validate("required")
     //@DataType("password")
-    @Validate("required,minlength=5,regexp=[a-zA-Z]+")
+    //@Validate("required,minlength=5,regexp=[a-zA-Z]+")
     private String password;
 
     @Column
