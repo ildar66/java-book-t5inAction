@@ -25,10 +25,10 @@ Demo pages:
 <p>
     <a t:type="pagelink" page="chapter09/greeterdemo">Using Greeter component</a>
 </p>
-<!-- <p>
+<p>
     <a t:type="pagelink" page="chapter09/guessnumberdemo">Using GuessNumber component</a>
 </p>
-<p>
+<!-- <p>
     <a t:type="pagelink" page="chapter09/dukedemo">Using Duke component</a>
 </p>
 <p>
