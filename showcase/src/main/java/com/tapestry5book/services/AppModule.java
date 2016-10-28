@@ -1,6 +1,7 @@
 package com.tapestry5book.services;
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.Currency;
 
 import org.apache.tapestry5.NullFieldStrategy;
@@ -52,6 +53,7 @@ import com.tapestry5book.services.impl.PasswordPolicyServiceImpl;
 import com.tapestry5book.services.impl.ReportServiceImpl;
 import com.tapestry5book.services.impl.TrackEncoder;
 import com.tapestry5book.services.impl.TrackPriceServiceImpl;
+import com.tapestry5book.services.impl.URLTranslator;
 import com.tapestry5book.services.impl.UserDaoImpl;
 import com.tapestry5book.services.impl.VoteServiceImpl;
 
@@ -217,6 +219,7 @@ public class AppModule {
 	@Contribute(TranslatorSource.class)
 	public static void provideTranslators(MappedConfiguration<Class, Translator> configuration) {
 		configuration.add(Currency.class, new CurrencyTranslator());
+		configuration.add(URL.class, new URLTranslator());
 	}
 
 	@Contribute(NullFieldStrategySource.class)
@@ -224,16 +227,20 @@ public class AppModule {
 		configuration.add("currency", new CurrencyNullFieldStrategy());
 	}
 
+	public static void contributeDefaultDataTypeAnalyzer(MappedConfiguration<Class, String> configuration) {
+		configuration.add(URL.class, "url");
+	}
+
 	@Contribute(BeanBlockSource.class)
 	public static void providePropertyBlocks(Configuration<BeanBlockContribution> configuration) {
 
-		/*EditBlockContribution editBlock = new EditBlockContribution("url", "chapter08/AppPropertyEditBlocks",
-				"urlBlock");*/
+		EditBlockContribution editBlock = new EditBlockContribution("url", "chapter08/AppPropertyEditBlocks",
+				"urlBlock");
 
 		DisplayBlockContribution displayBlock = new DisplayBlockContribution("url",
 				"chapter08/AppPropertyDisplayBlocks", "urlBlock");
 
-		//configuration.add(editBlock);
+		configuration.add(editBlock);
 		configuration.add(displayBlock);
 	}
 
