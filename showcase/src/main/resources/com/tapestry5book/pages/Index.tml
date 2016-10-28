@@ -18,5 +18,8 @@
     <p>
         <a t:type="pagelink" t:page="chapter08/index">Chapter 8: Generating UI for JavaBeans</a>
     </p>
+    <p>
+        <a t:type="pagelink" t:page="chapter09/index">Chapter 9: Developing reusable components</a>
+    </p>
 </html>
 
