@@ -1,6 +1,7 @@
 <html t:type="layout" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
 
-    <div t:type="guessnumber"/>
+    <!-- <div t:type="guessnumber"/> -->
+    <div t:type="guessnumber" min="3" max="5"/>
 
 </html>
 
