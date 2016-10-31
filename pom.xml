@@ -17,6 +17,7 @@
     <modules>
         <module>hello-world</module>
         <module>showcase</module>
+        <module>demo-library</module>
     </modules>
 
     <dependencyManagement>
