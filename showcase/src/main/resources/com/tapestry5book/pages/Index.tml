@@ -21,5 +21,8 @@
     <p>
         <a t:type="pagelink" t:page="chapter09/index">Chapter 9: Developing reusable components</a>
     </p>
+    <p>
+        <a t:type="pagelink" t:page="chapter10/index">Chapter 10: Mixins</a>
+    </p>
 </html>
 
