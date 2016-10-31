@@ -25,10 +25,10 @@ Demo pages:
 <p>
     <a t:type="pagelink" page="chapter10/mixinclassesannotationdemo">Applying mixins using MixinClasses annotation</a>
 </p>
-<!-- <p>
+<p>
     <a t:type="pagelink" page="chapter10/autocompletedemo">Enabling a simple text field to function as Google's search field using Autocomplete mixin</a>
 </p>
-<p>
+<!-- <p>
     <a t:type="pagelink" page="chapter10/ckeditordemo">Turning a TextArea component instance into a WYSIWYG editor using CKEditor mixin</a>
 </p>
 <p>
