@@ -16,10 +16,10 @@
 
 
 Demo pages:
-<!-- <p>
+<p>
     <a t:type="pagelink" page="chapter10/renderinformalsdemo">Rendering informal parameters using RenderInformals mixin</a>
 </p>
-<p>
+<!-- <p>
     <a t:type="pagelink" page="chapter10/mixinsannotationdemo">Applying mixins using Mixins annotation</a>
 </p>
 <p>
