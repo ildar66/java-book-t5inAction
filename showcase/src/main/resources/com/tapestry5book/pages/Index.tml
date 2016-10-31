@@ -24,5 +24,8 @@
     <p>
         <a t:type="pagelink" t:page="chapter10/index">Chapter 10: Mixins</a>
     </p>
+    <p>
+        <a t:type="pagelink" t:page="chapter11/index">Chapter 11: Creating Ajax-enabled applications</a>
+    </p>
 </html>
 
