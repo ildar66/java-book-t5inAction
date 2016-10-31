@@ -24,10 +24,10 @@ Demo pages:
 <p>
     <a t:type="pagelink" page="chapter09/simpleloopdemo">Using SimpleLoop component</a>
 </p>
-<!-- <p>
+<p>
     <a t:type="pagelink" page="chapter09/subcomponentdemo">Inheriting component templates</a>
 </p>
-<p>
+<!-- <p>
     <a t:type="pagelink" page="chapter09/librarydemo">Using a component from a library</a>
 </p> -->
 
