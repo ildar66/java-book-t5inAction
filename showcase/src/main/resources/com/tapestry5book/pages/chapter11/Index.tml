@@ -46,10 +46,10 @@ Demo pages:
 <p>
     <a t:type="pagelink" page="chapter11/jsoninitsdemo">Working with JSON and initializer functions</a>
 </p>
-<!-- <p>
+<p>
     <a t:type="pagelink" page="chapter11/effectsdemo">Visualising Zone updates</a>
 </p>
-<p>
+<!-- <p>
     <a t:type="pagelink" page="chapter11/inplaceeditordemo">Creating a in-place editor with InPlaceEditor component.</a>
 </p>
  -->
