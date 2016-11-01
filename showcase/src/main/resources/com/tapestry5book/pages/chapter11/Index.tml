@@ -34,10 +34,10 @@ Demo pages:
 <p>
     <a t:type="pagelink" page="chapter11/multizonedemo">Updating multiple zones (Providing new content with blocks)</a>
 </p>
-<!-- <p>
+<p>
     <a t:type="pagelink" page="chapter11/multizonerendercommanddemo">Updating multiple zones (Providing new content with RenderCommand)</a>
 </p>
-<p>
+<!-- <p>
     <a t:type="pagelink" page="chapter11/multizonecallbackdemo">Updating multiple zones (Registering JavaScript callbacks)</a>
 </p>
 <p>
