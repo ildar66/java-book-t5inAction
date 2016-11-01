@@ -40,10 +40,10 @@ Demo pages:
 <p>
     <a t:type="pagelink" page="chapter11/multizonecallbackdemo">Updating multiple zones (Registering JavaScript callbacks)</a>
 </p>
-<!-- <p>
+<p>
     <a t:type="pagelink" page="chapter11/jsondemo">Working with JSON</a>
 </p>
-<p>
+<!-- <p>
     <a t:type="pagelink" page="chapter11/jsoninitsdemo">Working with JSON and initializer functions</a>
 </p>
 <p>
