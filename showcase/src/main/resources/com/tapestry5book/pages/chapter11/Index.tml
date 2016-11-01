@@ -16,10 +16,10 @@
 
 
 Demo pages:
-<!-- <p>
+<p>
     <a t:type="pagelink" page="chapter11/worldtime">Performing partial page updates periodically with ZoneRefresh mixin</a>
 </p>
-<p>
+<!-- <p>
     <a t:type="pagelink" page="chapter11/progressivedisplaydemo">Lazy loading page content with ProgressiveDisplay component</a>
 </p>
 <p>
