@@ -25,10 +25,10 @@ Demo pages:
 <p>
     <a t:type="pagelink" page="chapter11/zonedemo">Performing partial updates with Zone component (Returning zone's body)</a>
 </p>
-<!-- <p>
+<p>
     <a t:type="pagelink" page="chapter11/blockdemo">Performing partial updates with Zone component (Returning a block from template)</a>
 </p>
-<p>
+<!-- <p>
     <a t:type="pagelink" page="chapter11/login">Ajax-enabled Login form</a>
 </p>
 <p>
