@@ -14,5 +14,8 @@ Demo pages:
 	<a t:type="pagelink" page="chapter12/ShowArticles">Configuring
 		Hibernate. Obtaining Hibernate session in pages and components </a>
 </p>
+<p>
+	<a t:type="pagelink" page="chapter12/ShowArticles2">Obtaining Hibernate session in services</a>
+</p>
 
 </html>
