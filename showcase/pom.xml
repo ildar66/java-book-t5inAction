@@ -51,6 +51,11 @@
 			<artifactId>demo-library</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
 		</dependency> -->
+		
+		<dependency>
+			<groupId>org.apache.tapestry</groupId>
+			<artifactId>tapestry-spring</artifactId>
+		</dependency>
         
   </dependencies>
   <!-- <repositories>

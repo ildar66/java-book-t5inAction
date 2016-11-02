@@ -30,5 +30,8 @@
     <p>
         <a t:type="pagelink" t:page="chapter12/index">Chapter 12: Persisting domain objects</a>
     </p>
+    <p>
+        <a t:type="pagelink" t:page="chapter13/index">Chapter 13: Integrating Spring framework</a>
+    </p>
 </html>
 
