@@ -15,6 +15,6 @@ public interface BlogService {
 	Article findArticleById(Long id);
 
 	// Declarative transaction managemen
-	@CommitAfter
+	//@CommitAfter
 	void persistArticle(Article article);
 }

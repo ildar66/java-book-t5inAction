@@ -18,7 +18,13 @@ Demo pages:
 	<a t:type="pagelink" page="chapter12/ShowArticles2">Obtaining Hibernate session in services</a>
 </p>
 <p>
-	<a t:type="pagelink" page="chapter12/post">Transaction management.t</a>
+	<a t:type="pagelink" page="chapter12/post">Transaction management. Declarative transaction management</a>
+</p>
+<p>
+	<a t:type="pagelink" page="chapter12/post2">Transaction management. Demonstrates HibernateSessionManager service.</a>
+</p>
+<p>
+	<a t:type="pagelink" page="chapter12/post3">Transaction management. Contributing a transaction interceptor.</a>
 </p>
 
 </html>

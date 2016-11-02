@@ -169,10 +169,11 @@ public class AppModule {
 		configuration.add(clazz, factory);
 	}
 
-/*	@Advise(serviceInterface = BlogService.class)
+	// Declarative transaction managemen. Contributing a transaction interceptor
+	@Advise(serviceInterface = BlogService.class)
 	public static void adviseTransactionally(HibernateTransactionAdvisor advisor, MethodAdviceReceiver receiver) {
 		advisor.addTransactionCommitAdvice(receiver);
-	}*/
+	}
 
 	@Contribute(ApplicationStateManager.class)
 	public static void provideApplicationStateContributions(
