@@ -1,0 +1,18 @@
+<html t:type="indexlayout"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
+<div>
+	This chapter covers:
+	<ul>
+		<li>Integrating Hibernate</li>
+		<li>Integrating Java Persistence API</li>
+	</ul>
+</div>
+
+
+Demo pages:
+<p>
+	<a t:type="pagelink" page="chapter12/ShowArticles">Configuring
+		Hibernate. Obtaining Hibernate session in pages and components </a>
+</p>
+
+</html>

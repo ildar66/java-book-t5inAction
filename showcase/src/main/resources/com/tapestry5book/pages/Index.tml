@@ -27,5 +27,8 @@
     <p>
         <a t:type="pagelink" t:page="chapter11/index">Chapter 11: Creating Ajax-enabled applications</a>
     </p>
+    <p>
+        <a t:type="pagelink" t:page="chapter12/index">Chapter 12: Persisting domain objects</a>
+    </p>
 </html>
 
