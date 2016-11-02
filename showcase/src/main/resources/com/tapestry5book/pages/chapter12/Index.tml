@@ -26,5 +26,8 @@ Demo pages:
 <p>
 	<a t:type="pagelink" page="chapter12/post3">Transaction management. Contributing a transaction interceptor.</a>
 </p>
+<p>
+	<a t:type="pagelink" page="chapter12/ShowArticlesGrid">Hibernate enabled Grid component</a>
+</p>
 
 </html>
