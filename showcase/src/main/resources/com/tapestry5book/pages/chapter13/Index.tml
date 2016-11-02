@@ -6,14 +6,18 @@
 		<li>Bootstrapping Spring's application context</li>
 		<li>Obtaining Spring beans</li>
 		<li>Obtaining Tapestry services in Spring beans</li>
-		<li>Tweaking the application context</li>
+		<li>Customizing the ApplicationContext</li>
+		<li>Using externally configured ApplicationContext</li>
 	</ul>
 </div>
 
 
 Demo pages:
 <p>
-	<a t:type="pagelink" page="chapter13/ApplicationContextDemo">Bootstrapping Spring's application context</a>
+	<a t:type="pagelink" page="chapter13/ApplicationContextDemo">Injecting ApplicationContext into a Tapestry page</a>
+</p>
+<p>
+	<a t:type="pagelink" page="chapter13/InjectBeanDemo">Injecting a Spring bean into a page</a>
 </p>
 
 </html>
