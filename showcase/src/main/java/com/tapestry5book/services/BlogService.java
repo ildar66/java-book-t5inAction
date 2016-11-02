@@ -8,12 +8,13 @@ import java.util.List;
 
 public interface BlogService {
 
-    Blog findBlog();
+	Blog findBlog();
 
-    List<Article> findRecentArticles();
+	List<Article> findRecentArticles();
 
-    Article findArticleById(Long id);
+	Article findArticleById(Long id);
 
-    @CommitAfter
-    void persistArticle(Article article);
+	// Declarative transaction managemen
+	@CommitAfter
+	void persistArticle(Article article);
 }
