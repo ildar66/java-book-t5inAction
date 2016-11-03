@@ -9,9 +9,9 @@ public class ActionLinkDemo {
 	@Persist
 	private int number;
 
-	void onAction() {
+	/*void onAction() {
 		this.number++;
-	}
+	}*/
 
 	void onActionFromIncrementLink() {
 		this.number++;
