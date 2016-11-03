@@ -57,11 +57,22 @@
 			<artifactId>tapestry-spring</artifactId>
 		</dependency>
 		
-		<dependency><groupId>org.apache.tapestry</groupId><artifactId>tapestry-test</artifactId></dependency>
+		<dependency>
+			<groupId>org.apache.tapestry</groupId>
+			<artifactId>tapestry-test</artifactId>
+		</dependency>
+		
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>6.4</version>
+			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit-dep</artifactId>
+			<version>4.10</version>
 			<scope>test</scope>
 		</dependency>
         

@@ -39,6 +39,7 @@ import org.apache.tapestry5.services.ValueEncoderSource;
 import org.apache.tapestry5.validator.ValidatorMacro;
 import org.slf4j.Logger;
 
+import com.tapestry5book.AppSymbolConstants;
 import com.tapestry5book.entities.Blog;
 import com.tapestry5book.entities.ShoppingCart;
 import com.tapestry5book.entities.Track;
@@ -81,6 +82,7 @@ public class AppModule {
 		configuration.add(SymbolConstants.PRODUCTION_MODE, "false");
 		configuration.add(SymbolConstants.SUPPORTED_LOCALES, "en,de,ru,iw");
 		//configuration.add(HibernateSymbols.PROVIDE_ENTITY_VALUE_ENCODERS, "false");
+		configuration.add(AppSymbolConstants.PASSWORD_EXPIRY_PERIOD, "60 d");
 
 		// Configuration of file uploads
 		// configuration.add(UploadSymbols.REPOSITORY_THRESHOLD, "5120");
