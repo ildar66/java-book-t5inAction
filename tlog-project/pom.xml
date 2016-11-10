@@ -9,4 +9,7 @@
 	<artifactId>tlog-project</artifactId>
 	<packaging>pom</packaging>
 	<name>Tapestry Blog Projects</name>
+	<modules>
+		<module>tlog-web</module>
+	</modules>
 </project>
