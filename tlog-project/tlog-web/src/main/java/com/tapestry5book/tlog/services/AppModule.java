@@ -3,10 +3,11 @@ package com.tapestry5book.tlog.services;
 import com.tapestry5book.tlog.core.entities.Blog;
 import com.tapestry5book.tlog.core.entities.Skin;
 import com.tapestry5book.tlog.core.services.*;
-//import com.tapestry5book.tlog.pages.SidebarBlocks;
+import com.tapestry5book.tlog.pages.SidebarBlocks;
 import com.tapestry5book.tlog.services.impl.*;
 import com.tapestry5book.tlog.skins.SkinConstants;
 import org.apache.tapestry5.PersistenceConstants;
+import org.apache.tapestry5.SymbolConstants;
 import org.apache.tapestry5.ioc.MappedConfiguration;
 import org.apache.tapestry5.ioc.OrderedConfiguration;
 import org.apache.tapestry5.ioc.Resource;
@@ -41,15 +42,16 @@ public class AppModule {
 		};
 		configuration.add(Blog.class, new ApplicationStateContribution(PersistenceConstants.SESSION, creator));
 	}
-/**
+
 	@Contribute(SidebarBlockSource.class)
 	public static void provideSideBlocks(final OrderedConfiguration<SidebarBlockContribution> configuration) {
 
 		configuration.add("Pages", new SidebarBlockContribution(SidebarBlocks.class, "pages"), "before:*");
 
-		configuration.add("Meta", new SidebarBlockContribution(SidebarBlocks.class, "meta"), "after:*");
+		// configuration.add("Meta", new SidebarBlockContribution(SidebarBlocks.class, "meta"), "after:*");
+		 configuration.add("Blogroll", new SidebarBlockContribution(SidebarBlocks.class, "blogroll"), "after:*");
 	}
-
+/**
 	@Contribute(ComponentRequestHandler.class)
 	public static void provideComponentRequestFilters(OrderedConfiguration configuration) {
 		configuration.addInstance("PageAccess", PageAccessFilter.class);
@@ -77,6 +79,17 @@ public class AppModule {
 	@Startup
 	public static void initDemoData(@Autobuild final DemoDataSource source) {
 		source.create();
+	}
+	
+	public static void contributeApplicationDefaults(
+			MappedConfiguration<String, String> configuration) {
+
+		// The factory default is true but during the early stages of an
+		// application
+		// overriding to false is a good idea. In addition, this is often
+		// overridden
+		// on the command line as -Dtapestry.production-mode=false
+		configuration.add(SymbolConstants.PRODUCTION_MODE, "false");
 	}
 
 }
