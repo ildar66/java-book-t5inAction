@@ -1,0 +1,20 @@
+<html t:type="admin/layout" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" xmlns:p="tapestry:parameter" title="title">
+
+    <p>${message}</p>
+
+    <form t:type="form" clientValidation="false">
+        <t:errors/>
+        <div class="form-row">
+            <label t:type="label" for="title"/>
+            <input t:type="textfield" t:id="title" value="article.title"/>
+        </div>
+        <div class="form-row">
+            <textarea t:type="textarea" value="article.content" t:mixins="ckeditor"/>
+        </div>
+        <div class="form-row">
+            <input t:type="submit" value="message:save" class="button"/>
+            <input t:type="submit" value="message:publish" event="publish" class="button"/>
+        </div>
+    </form>
+
+</html>

@@ -12,5 +12,6 @@
 	<modules>
 		<module>tlog-web</module>
 		<module>tlog-core</module>
+		<module>plagins</module>
 	</modules>
 </project>
