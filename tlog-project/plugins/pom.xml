@@ -13,5 +13,6 @@
 	<modules>
 		<module>tlog-archive</module>
 		<module>tlog-blogroll</module>
+		<module>tlog-tags</module>
 	</modules>
 </project>
