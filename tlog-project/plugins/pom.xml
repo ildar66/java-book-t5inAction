@@ -12,5 +12,6 @@
 	</parent>
 	<modules>
 		<module>tlog-archive</module>
+		<module>tlog-blogroll</module>
 	</modules>
 </project>
