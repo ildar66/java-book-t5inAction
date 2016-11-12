@@ -8,10 +8,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-/**
- * The Article class represents an article to be posted on the blog. An article has a title, a publish date
- * and a content text field. An article can be commented on and may be tagged.
- */
 @Entity
 public class Article {
 	@Id

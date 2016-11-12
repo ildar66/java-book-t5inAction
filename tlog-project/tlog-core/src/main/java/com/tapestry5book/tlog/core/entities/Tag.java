@@ -5,10 +5,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-/**
- * A comment is represented by the Comment class and a tag by the Tag class for @ see {@link Article}.
- */
-
 @Entity
 public class Tag {
 	@Id

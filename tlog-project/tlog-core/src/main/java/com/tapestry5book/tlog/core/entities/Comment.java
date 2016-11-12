@@ -5,9 +5,6 @@ import org.apache.tapestry5.beaneditor.NonVisual;
 import javax.persistence.*;
 import java.util.Date;
 
-/**
- * A comment is represented by the Comment class and a tag by the Tag class for @ see {@link Article}.
- */
 @Entity
 public class Comment {
 

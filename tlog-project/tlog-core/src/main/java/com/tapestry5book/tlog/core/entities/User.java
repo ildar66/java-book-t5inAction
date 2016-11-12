@@ -5,18 +5,17 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-/**
- * A comment is represented by the Comment class and a tag by the Tag class for @ see {@link Article}.
- */
-
 @Entity
-public class Tag {
+public class User {
 	@Id
 	@GeneratedValue
 	private Long id;
 
 	@Column
 	private String name;
+
+	@Column(name = "PASSWD")
+	private String password;
 
 	public Long getId() {
 		return this.id;
@@ -32,5 +31,13 @@ public class Tag {
 
 	public void setName(final String name) {
 		this.name = name;
+	}
+
+	public String getPassword() {
+		return this.password;
+	}
+
+	public void setPassword(final String password) {
+		this.password = password;
 	}
 }

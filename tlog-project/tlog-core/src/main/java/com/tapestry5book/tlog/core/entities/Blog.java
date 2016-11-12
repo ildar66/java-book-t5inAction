@@ -4,7 +4,6 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-/** The Blog class represents a blog with a name and a description. */
 @Entity
 public class Blog {
 
