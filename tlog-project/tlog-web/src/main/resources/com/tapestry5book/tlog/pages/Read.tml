@@ -57,7 +57,7 @@
 
 
         <p><textarea t:type="textarea" t:id="commentText" value="comment.content" cols="100%" rows="10" validate="required"/></p>
-<!-- 
+
         <p>
             <img t:id="kaptchaImage"/>
             <br/>
@@ -68,7 +68,7 @@
                 <div id="captureText">${captchaText}</div>
             </t:unless>
         </p>
- -->
+
         <p><input name="submit" type="submit" id="submit" tabindex="5" value="${message:submit-value}"/></p>
 
     </form>

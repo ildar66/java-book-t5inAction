@@ -16,81 +16,79 @@ import java.io.InputStream;
 import java.util.List;
 
 public class ViewReport {
-    @Inject
-    @Property
-    private ReportService reportService;
+	@Inject
+	@Property
+	private ReportService reportService;
 
-    @Property
-    private ReportParameter currentParameter;
+	@Property
+	private ReportParameter currentParameter;
 
-    private String reportName = "report";
+	private String reportName = "report";
 
-    @Property
-    private List<ReportParameter> parameters;
+	@Property
+	private List<ReportParameter> parameters;
 
-    @Inject
-    private Block stringBlock;
+	@Inject
+	private Block stringBlock;
 
-    @Inject
-    private Block dateBlock;
+	@Inject
+	private Block dateBlock;
 
-    @Inject
-    private Block numericBlock;
+	@Inject
+	private Block numericBlock;
 
-    void pageAttached() {
-        parameters = reportService.getReportParameters(reportName);
-    }
+	void pageAttached() {
+		parameters = reportService.getReportParameters(reportName);
+	}
 
-    void onAfterSubmit() {
-        for (ReportParameter next : parameters) {
-            if (next.getName().equals(currentParameter.getName())) {
-                next.setValue(currentParameter.getValue());
-                return;
-            }
-        }
-    }
+	void onAfterSubmit() {
+		for (ReportParameter next : parameters) {
+			if (next.getName().equals(currentParameter.getName())) {
+				next.setValue(currentParameter.getValue());
+				return;
+			}
+		}
+	}
 
-    Object onSuccess() {
-        return new StreamResponse() {
+	Object onSuccess() {
+		return new StreamResponse() {
 
-            public String getContentType() {
-                return "application/pdf";
-            }
+			public String getContentType() {
+				return "application/pdf";
+			}
 
-            public InputStream getStream() throws IOException {
-                return reportService.getReportData(reportName, parameters);
-            }
+			public InputStream getStream() throws IOException {
+				return reportService.getReportData(reportName, parameters);
+			}
 
-            public void prepareResponse(final Response response) {
-                response.setHeader("Content-disposition",
-                        "attachment;filename=report.pdf");
+			public void prepareResponse(final Response response) {
+				response.setHeader("Content-disposition", "attachment;filename=report.pdf");
 
-            }
+			}
 
-        };
-    }
+		};
+	}
 
-    public Block getActiveBlock() {
-        if (currentParameter instanceof NumericParameter) {
-            return numericBlock;
-        } else if (currentParameter instanceof DateParameter) {
-            return dateBlock;
-        }
-        return stringBlock;
-    }
+	public Block getActiveBlock() {
+		if (currentParameter instanceof NumericParameter) {
+			return numericBlock;
+		} else if (currentParameter instanceof DateParameter) {
+			return dateBlock;
+		}
+		return stringBlock;
+	}
 
-    public ValueEncoder getEncoder() {
-        return new ValueEncoder<ReportParameter>() {
+	public ValueEncoder getEncoder() {
+		return new ValueEncoder<ReportParameter>() {
 
-            public String toClient(ReportParameter clientValue) {
-                return clientValue.getName();
-            }
+			public String toClient(ReportParameter clientValue) {
+				return clientValue.getName();
+			}
 
-            public ReportParameter toValue(String clientValue) {
-                return reportService.findReportParameter(reportName,
-                        clientValue);
-            }
+			public ReportParameter toValue(String clientValue) {
+				return reportService.findReportParameter(reportName, clientValue);
+			}
 
-        };
-    }
+		};
+	}
 }

@@ -8,7 +8,7 @@ import org.apache.tapestry5.annotations.*;
 import org.apache.tapestry5.hibernate.annotations.CommitAfter;
 import org.apache.tapestry5.ioc.Messages;
 import org.apache.tapestry5.ioc.annotations.Inject;
-//import org.apache.tapestry5.kaptcha.components.KaptchaImage;
+import org.apache.tapestry5.kaptcha.components.KaptchaImage;
 
 @PublicPage
 public class Read {
@@ -30,8 +30,8 @@ public class Read {
     @Inject
     private Messages messages;
 
-//    @Component
-//    private KaptchaImage kaptchaImage;
+    @Component
+    private KaptchaImage kaptchaImage;
 
 
     void setupRender() {
@@ -57,8 +57,8 @@ public class Read {
     }
 
 
-/*    public String getCaptchaText(){
+    public String getCaptchaText(){
         return kaptchaImage.getCaptchaText();
-    }*/
+    }
 
 }
